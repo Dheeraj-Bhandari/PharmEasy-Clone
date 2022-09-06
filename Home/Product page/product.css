@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+#productSection{
+    margin-top: 50px;
+    display: flex;
+   
+    /* grid-template-columns: repeat(2,1fr); */
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 400px;
+}
+#ProdDetails{
+    display: flex;
+}
+
+#largeProdImg{
+   /* border: 2px solid red; */
+   /* border: 1px solid #E6EBF4; */
+   border-radius: 15px;
+   width: 250px;
+   height: 300px;
+   margin-bottom: 15px;
+   margin: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+#largeProdImg img{
+    width: 100%;
+    /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
+    padding: 20px;
+
+
+}
+
+
+
+#smallProdImagediv{
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    width: 50px;
+    height: 60px;
+    margin-left: 10px;
+}
+#smallProdImage{
+    width: 100%;
+    margin: auto;
+    margin-left: 8px;
+   
+}
+
+#prodDetailsSection{
+    margin: 20px;
+    /* border: 2px solid black; */
+    width: 60%;
+}
+#prodrating{
+    color: #FFD344;
+    /* border: 2px solid red; */
+    
+}
+#prodrating span{
+    color: rgb(180, 180, 180);
+}
+
+#Prodprice{
+    font-weight: bolder;
+    font-size: large;
+    margin-top: 20px;
+}
+#mrp{
+    font-size: small;
+    text-decoration: line-through;
+    color: #8897A2;
+}
+#inclusive{
+    font-size: smaller;
+    margin-top: -10px;
+}
+#deliveryDate{
+    font-size: smaller;
+    margin-top: -10px;
+}
+
+#off{
+    text-decoration: none;
+    background-image: url("https://assets.pharmeasy.in/web-assets/_next/icons/pdp-discount.png");
+    color: white;
+    font-size: small;
+}
+#addqtybtn{
+    background-color: #10847E;
+}
+#AddQty{
+    width: 20px;
+    background: #10847E;
+}
+
+#AddQty:hover{
+    
+    background: #3d5554;
+}
+
+/* hr line */
+
+#hrline{
+    margin: auto;
+    margin-top: 200px;
+    width: 500px;
+    
+}
+
+
+
+
+/* Addd to Cart Button  */
+
+#Addtocart{
+    background: #10847E;
+    height: 45px;
+    font-weight: 700;
+    width: 300px;
+    /* border: 2px solid red; */
+    margin-top: -50px;
+    position: sticky;
+    }
+#Addtocart:hover{
+        background: #427270;
+}
+#AddQty{
+    width: 20px;
+}
+
+/* View Cart */
+
+
+#viewCart{
+    margin-left: 40px;
+}
+#ViewCartbtn{
+    background: #10847E;
+    height: 45px;
+    font-weight: 700;
+    width: 300px;
+    /* border: 2px solid red; */
+    margin-top: 50px;
+    margin-left: 25px;
+    }
+#ViewCartbtn:hover{
+        background: #427270;
+}
+
+#viewCart img{
+    margin-top:  40px;
+    width: 80%;
+}
+
+/* Deal of the day */
+
+#DealsofTheDayH4{
+    font-weight: bold;
+    margin-top: 4%;
+}
+
+#DealsofTheDay{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 20px;
+    /* border: 2px solid red; */
+}
+
+#DealsofTheDay+div{
+    /* border: 2px solid red; */
+   
+    border: 1px solid #E6EBF4;
+}
+
+#DealsofTheDay>div{
+    width: 178px;
+    height: 190px;
+    border-radius: 8px;
+    margin-top: 5%;
+    border: 1px solid #E6EBF4;
+    /* border: 2px solid red; */
+}
+#DealsofTheDay>div:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+    
+   
+}
+
+#DealsofTheDayImg{
+    /* border: 2px solid red; */
+    /* width: 100%; */
+    /* height: 190px; */
+
+}
+#DealsofTheDayImg img{
+  width: 80%;
+ /* width: 50%; */
+ height: 150px;
+ margin: auto;
+ padding-top: 20px;
+ padding-left: 25px;
+
+ /* margin-left:45px; */
+ /* margin-top: 10px; */
+ /* object-fit: cover; */
+ /* border: 2px solid red; */
+  
+    
+}
+
+#DealsofTheDayProdName{
+    padding-top: 5em;
+    font-size: 14px;
+    color: #30363C;
+    font-weight: lighter;
+    
+}
+
+#DealsofTheDayMRP{
+    color: #CAD1D6;
+    font-size: 13px;
+    margin-top: -10px;
+    font-weight: bold;
+}
+
+#DealsofTheDayMRP span{
+    text-decoration: line-through;
+   
+}
+
+#DealsofTheDayPrice{
+    font-weight: lighter;
+    margin-top: -0.5em;
+}
+#DealsofTheDayPrice span{
+   
+    font-size: 13px;
+    margin-left: 2px;
+    color: #F47D7F;
+    font-weight: bold;
+}
+
+/*  hr line spotlgiht */
+
+#hrlineSpotLight{
+    margin-top: 200px;
+}
+
+/* In the SpotLight */
+
+
+
+#InTheSpotLightContainer{
+    margin-top: 12em;
+     border-top: none;
+     background: url(https://assets.pharmeasy.in/apothecary/images/spotlightBig.svg) no-repeat, linear-gradient(rgb(255, 248, 227) 0%, rgba(255, 255, 255, 0) 100%);
+     background-repeat: no-repeat;
+     width: 100%;
+     height: 450px;
+     
+ }
+ 
+ #InTheSpotLightH4{
+     font-weight: bold;
+     margin-top: 3%;
+     margin-left: 2%;
+ }
+ 
+ #InTheSpotLight{
+     display: grid;
+     grid-template-columns: repeat(6,1fr);
+     gap: 20px;
+     /* border: 2px solid red; */
+ }
+ 
+ #InTheSpotLight+div{
+     /* border: 2px solid red; */
+    
+     /* border: 1px solid #E6EBF4; */
+     
+ }
+ 
+ #InTheSpotLight>div{
+     width: 80%;
+     height: 180px;
+     border-radius: 8px;
+     /* margin-top: 5%; */
+     margin: 3%;
+     margin: auto;
+     /* border: 1px solid #E6EBF4; */
+     
+ }
+ #InTheSpotLight>div:hover{
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+     cursor: pointer;
+     
+ }
+ 
+ #InTheSpotLightImg img{
+     width: 100%;
+  height: 175px;
+  
+ }
+ 
+ #InTheSpotLightProName{
+     padding-top: 5em;
+     font-size: 14px;
+     color: #30363C;
+     font-weight: lighter;
+     margin-top: -50px;
+     
+ }
+ 
+ #InTheSpotLightMRP{
+     color: #CAD1D6;
+     font-size: 13px;
+     margin-top: -10px;
+     font-weight: bold;
+ }
+ 
+ #InTheSpotLightMRP span{
+     text-decoration: line-through;
+    
+ }
+ 
+ #InTheSpotLightPrice{
+     font-weight: lighter;
+     margin-top: -0.5em;
+ }
+ #InTheSpotLightPrice span{
+    
+     font-size: 13px;
+     margin-left: 2px;
+     color: #F47D7F;
+     font-weight: bold;
+ }
+
+
+ /* Health Articles */
+#HealthArticleH4{
+    font-weight: bold;
+    margin-top: 3%;
+}
+#HealthArticleP{
+    color: #959A9E;
+}
+
+#HealthArticles{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 10px;
+
+    
+}
+#HealthArticles img{
+    width: 100%;
+    height: 60%;
+    border-radius: 5px;
+    
+    
+}
+
+#HealthArticlesDiv{
+    border: 1px solid #E6EBF4;
+    border-radius: 5px;
+    width: 220px;
+    height: 224px;
+  
+}
+#HealthArticlesDiv p{
+    text-align: start;
+    justify-self: flex-end;
+   font-weight: lighter;
+   height: 40%;
+    margin: auto;
+    font-size: medium;
+    padding: 7%;
+    /* border: 2px solid black; */
+   
+}
+
+#HealthArticlesDiv:hover{
+    cursor: pointer;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/*  */
+
+#WhyChooseUse img{
+    width: 100%;
+    margin-top: 5%;
+}
+/* What Our Customers have to say  */
+
+#WhatOurCustHaveToSayH4{
+    font-weight: bold;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+
+#HwhatOurCustomerHaveToDayContainer{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 5px;
+
+
+}
+#HwhatOurCustomerHaveToDayContainer h6{
+    margin-left: 4%;
+    font-weight: bold;
+}
+#HwhatOurCustomerHaveToDayContainer p{
+    font-weight: lighter;
+    font-size: small;
+    margin-left: 4%;
+}
+
+/*  hr line footer 1 */
+
+#hrfooter1{
+    margin-top: 80px;
+ opacity: 10%;
+}
+#hrfooter2{
+    opacity: 10%;
+    margin-bottom: -5;
+}

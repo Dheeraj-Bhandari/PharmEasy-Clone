@@ -94,6 +94,17 @@ function logoutFunc(){
     window.location.href="home.html";  
 }
 
+function ShopFunc(){
+
+}
+
+function carFunc(){
+
+}
+
+function OfferFunc(){
+
+}
 
 //  Login Page 
 
@@ -112,7 +123,20 @@ if(loginstatus.length>0){
         p.setAttribute("id","logoutNavBar");
         p.addEventListener("click", logoutFunc);
         p.innerText= "Log Out";
-        div2.append(p);
+
+        var p2 = document.createElement("p");
+        p2.addEventListener("click", ShopFunc);
+        p2.innerText= "Shop";
+
+        var p3 = document.createElement("p");
+        p3.addEventListener("click", carFunc);
+        p3.innerText= "Cart";
+
+        var p4 = document.createElement("p");
+        p4.addEventListener("click", OfferFunc);
+        p4.innerText= "Offer";
+
+        div2.append(p2,p3,p4,p);
         div.append(span ,div2);
         document.getElementById("navbarLogin").append(div);
 
@@ -191,7 +215,7 @@ function otpconfirm(v, error, phnnumber) {
 
  
     } else {
-        error.innerText = "The code entered is incorrect."
+        error.innerText = "The OTP entered is incorrect."
     }
     
 }
@@ -354,7 +378,7 @@ var NewLaunchObj = [{
 },
 ]
 
-NewLaunchObj.map(function (ele) {
+NewLaunchObj.map(function (ele,index) {
     var div = document.createElement("div");
     var div2 = document.createElement("div");
     div2.setAttribute("id", "NewLaunchImg");
@@ -384,6 +408,11 @@ NewLaunchObj.map(function (ele) {
 
     div.append(div2, p, p2, p3);
     document.getElementById("NewLaunches").append(div);
+
+    img.addEventListener("click", function(){
+        FecthNewlaunchProduct(index);
+        
+    });
 
 })
 
@@ -434,7 +463,7 @@ var TrendingNearToYouOBJ = [{
 },
 ]
 
-TrendingNearToYouOBJ.map(function (ele) {
+TrendingNearToYouOBJ.map(function (ele,index) {
     var div = document.createElement("div");
     var div2 = document.createElement("div");
     div2.setAttribute("id", "TrendingNearToYouImg");
@@ -464,6 +493,11 @@ TrendingNearToYouOBJ.map(function (ele) {
 
     div.append(div2, p, p2, p3);
     document.getElementById("TrendingNearToYou").append(div);
+
+    img.addEventListener("click", function(){
+        FecthTrendingNearToYouProduct(index);
+        
+    });
 
 })
 
@@ -642,7 +676,7 @@ var DealsOftheDayOBJ = [{
 },
 ]
 
-DealsOftheDayOBJ.map(function (ele) {
+DealsOftheDayOBJ.map(function (ele,index) {
     var div = document.createElement("div");
     var div2 = document.createElement("div");
     div2.setAttribute("id", "DealsofTheDayImg");
@@ -672,6 +706,11 @@ DealsOftheDayOBJ.map(function (ele) {
 
     div.append(div2, p, p2, p3);
     document.getElementById("DealsofTheDay").append(div);
+
+    img.addEventListener("click", function(){
+        FecthDealsOftheDayProduct(index);
+        
+    });
 
 })
 
@@ -722,7 +761,7 @@ var InTheSpotLightOBJ = [{
 },
 ]
 
-InTheSpotLightOBJ.map(function (ele) {
+InTheSpotLightOBJ.map(function (ele , index) {
     var div = document.createElement("div");
     var div2 = document.createElement("div");
     div2.setAttribute("id", "InTheSpotLightImg");
@@ -752,6 +791,10 @@ InTheSpotLightOBJ.map(function (ele) {
 
     div.append(div2, p, p2, p3);
     document.getElementById("InTheSpotLight").append(div);
+    img.addEventListener("click", function(){
+        FecthSpotLightProduct(index);
+        
+    });
 
 })
 
@@ -792,3 +835,81 @@ HealthArticlesOBJ.map(function (ele) {
     div.append(img, p);
     document.getElementById("HealthArticles").append(div);
 })
+
+//  New launch Product
+
+function FecthNewlaunchProduct(i){
+    event.preventDefault();
+    var arr = NewLaunchObj.filter(function(ele,index){
+        if(index===i){
+            localStorage.setItem("ProductImg",JSON.stringify(ele.img_url));
+            localStorage.setItem("ProductName",JSON.stringify(ele.name));
+            localStorage.setItem("ProductPrice",ele.price);
+            localStorage.setItem("ProductMRP",ele.mrp);
+            localStorage.setItem("ProductOff",JSON.stringify(ele.off));
+        }
+        
+    })
+
+   location.replace("Product page/Product.html")
+}
+
+//Trending Product Near to You
+
+function FecthTrendingNearToYouProduct(i){
+    event.preventDefault();
+    var arr = TrendingNearToYouOBJ.filter(function(ele,index){
+        if(index===i){
+            localStorage.setItem("ProductImg",JSON.stringify(ele.img_url));
+            localStorage.setItem("ProductName",JSON.stringify(ele.name));
+            localStorage.setItem("ProductPrice",ele.price);
+            localStorage.setItem("ProductMRP",ele.mrp);
+            localStorage.setItem("ProductOff",JSON.stringify(ele.off));
+        }
+        
+    })
+
+   location.replace("Product page/Product.html")
+}
+
+
+// Deals of the day product
+
+function FecthDealsOftheDayProduct(i){
+    event.preventDefault();
+    var arr = DealsOftheDayOBJ.filter(function(ele,index){
+        if(index===i){
+            localStorage.setItem("ProductImg",JSON.stringify(ele.img_url));
+            localStorage.setItem("ProductName",JSON.stringify(ele.name));
+            localStorage.setItem("ProductPrice",ele.price);
+            localStorage.setItem("ProductMRP",ele.mrp);
+            localStorage.setItem("ProductOff",JSON.stringify(ele.off));
+        }
+        
+    })
+   
+   location.replace("Product page/Product.html")
+}
+
+// in the spotlight function
+
+function FecthSpotLightProduct(i){
+    event.preventDefault();
+    var arr = InTheSpotLightOBJ.filter(function(ele,index){
+        if(index===i){
+            localStorage.setItem("ProductImg",JSON.stringify(ele.img_url));
+            localStorage.setItem("ProductName",JSON.stringify(ele.name));
+            localStorage.setItem("ProductPrice",ele.price);
+            localStorage.setItem("ProductMRP",ele.mrp);
+            localStorage.setItem("ProductOff",JSON.stringify(ele.off));
+        }
+        
+    })
+   location.replace("Product page/Product.html")
+}
+
+
+
+
+ 
+
