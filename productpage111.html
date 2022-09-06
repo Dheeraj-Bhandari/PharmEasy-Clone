@@ -8,7 +8,7 @@
     <style>
         #navbar-top-mainbox-p{
             display: flex;
-            
+
             /* justify-content: space-around; */
         }
         #navbar-top-mainbox-p>div{
@@ -47,9 +47,13 @@
             background-color: rgb(238, 244, 255);
             align-items: center;
             padding: 1%;
-             
         }
         #navbar-bottom-box-p>div{
+            margin: auto;
+        }
+        .hometag{
+            width: 80%;
+            display: flex;
             margin: auto;
         }
         div>button{
@@ -57,6 +61,9 @@
            cursor: pointer;
            background-color: transparent;
         }
+        /* div>button:hover{
+            border-bottom: dashed black;
+        } */
         /* navbar product part end here */
         #product-items-box{
             display: grid;
@@ -75,8 +82,15 @@
         
         }
         #product-items-box>div:hover{
-         box-shadow: rgba(0,0,0,0.24)0px 3px 8px;
-         border: 3px solid #10847e;
+         /* box-shadow: rgba(0,0,0,0.24)0px 3px 8px;
+         border: 3px solid #10847e; */
+         box-shadow: 0 0 5px 2px #16876e;
+        }
+        #productpage_name_div{
+            display: inline-flex;
+            margin: auto;
+            margin-right: 15%;
+            justify-content: space-between;
         }
         font-face {
             font: Montserrat;
@@ -95,6 +109,9 @@
      #button_box_navbar>button{
         background-color: rgb(238, 244, 255);
         color:  #30363c;
+     }
+     #button_box_navbar>button:hover{
+        border-bottom: dashed black;
      }
      #documentation_product{
         width: 80%;
@@ -122,7 +139,7 @@
   .slider {
     overflow: hidden;
     position: relative;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     
   }
   .slider > ul {
@@ -212,6 +229,53 @@
     color: #fff;
     font-family: sans-serif;
   }
+  /* Footer Linkes */
+
+#FooterLinks{
+    background-color: #EEF4FF;
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+   width: 80%;
+   margin: auto;
+    
+}
+#FooterLinks ul{
+    font-weight: lighter;
+    font-size: small;
+    
+}
+#FooterLinks p{
+    font-weight: bold;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+#Footer4SocialMediaIcon i{
+   
+    padding: 20px;
+}
+
+#FooterPayment{
+    background-color: #EEF4FF;
+    width: 80%;
+    margin: auto;
+}
+#FooterPaymentPatnerP{
+    font-weight: bold;
+    margin-left: 2%;
+}
+#paymentimg{
+    display: flex;
+    
+    
+}
+#paymentimg img{
+    
+    width: 5%;
+    height: 3%;
+    margin: 20px;
+
+}
 
    
     </style>
@@ -260,6 +324,12 @@
       <button>Health Blogs</button>
         </div>
     </div>
+    <div>
+        <div class="hometag">
+            <button>Home</button>
+            <p> >  Healthcare</p>
+        </div>
+    </div>
     <!-- Navbar part end here -->
     <!-- Sliding Image Section -->
     <div class="slider">
@@ -288,6 +358,95 @@
     <div>
         <div id="documentation_product"></div>
     </div>
+    <!-- Footer Linkes -->
+    <div>
+    <div id="FooterLinks">
+        <div id="FooterDiv1">
+            <p>Company</p>
+            <ul>About us</ul>
+            <ul>Careers</ul>
+            <ul>Blog</ul>
+            <ul>Partner with PharmEasy</ul>
+            <ul>Partner with PharmEasy</ul>
+
+            <!-- <br> -->
+            <p>Our Services</p>
+            <ul>Order Medicine</ul>
+            <ul>Healthcare Products</ul>
+            <ul>Lab Tests</ul>
+        </div>
+
+        <div id="FooterDiv2">
+            <p>Features Categories</p>
+            <ul>Covid Essentials</ul>
+            <ul>Personal Care</ul>
+            <ul>Health Food and Drinks</ul>
+            <ul>Beauty</ul>
+            <ul>Skin Care</ul>
+            <ul>Home Care</ul>
+            <ul>Ayurvedic Care</ul>
+            <ul>Sexual Wellness</ul>
+            <ul>Sexual Wellness</ul>
+            <ul>Fitness Supplements</ul>
+            <ul>Mother and Baby Care</ul>
+            <ul>Healthcare Devices</ul>
+            <ul>Health Condition</ul>
+            <ul>Diabetic Care</ul>
+            <ul>Elderly Care</ul>
+            <ul>Accessories And Wearables</ul>
+            <ul>Top Products</ul>
+        </div>
+
+        
+        <div id="FooterDiv3">
+            <p>Need Help</p>
+            <ul>Browse All Molecules</ul>
+            <ul>Browse All Cities</ul>
+            <ul>Browse All Areas</ul>
+            <ul>Browse All Stores</ul>
+
+            <!-- <br> -->
+            <p>FAQs</p>
+            <ul>Policy Info</ul>
+            <ul>Editorial Policy</ul>
+            <ul>Privacy Policy</ul>
+            <ul>Vulnerability Disclosure Policy</ul>
+            <ul>Terms and Conditions</ul>
+            <ul>Customer Support Policy</ul>
+            <ul>Return Policy</ul>
+        </div>
+
+        <div id="FooterDiv4">
+            <p>Follow us on</p>
+            <div id="Footer4SocialMediaIcon">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+        </div>
+    </div>
+
+        
+
+    </div>
+
+    <div id="FooterPayment">
+        <p id="FooterPaymentPatnerP">Our Payment Partners</p>
+        <div id="paymentimg">
+         <img src="https://assets.pharmeasy.in/apothecary/images/gpay.png?dim=1440x0" alt="">
+         <img src="https://assets.pharmeasy.in/apothecary/images/paytm.png?dim=1440x0" alt="">
+         <img src="https://assets.pharmeasy.in/apothecary/images/phonepe.png?dim=1440x0" alt="">
+         <img src="https://assets.pharmeasy.in/apothecary/images/amazon.png?dim=1440x0" alt="">
+         <img src="https://assets.pharmeasy.in/apothecary/images/mobikwik.png?dim=1440x0" alt="">
+         <img src="https://assets.pharmeasy.in/apothecary/images/olamoney.png?dim=1440x0" alt="">
+         <img src="https://assets.pharmeasy.in/apothecary/images/maestro.png?dim=1440x0" alt="">
+         <img src="https://assets.pharmeasy.in/apothecary/images/mastercard.png?dim=1440x0" alt="">
+         <img src="https://assets.pharmeasy.in/apothecary/images/visa.png?dim=1440x0" alt="">
+         <img src="https://assets.pharmeasy.in/apothecary/images/rupay.png?dim=1440x0" alt="">
+         <p>© 2022 PharmEasy. All Rights Reserved</p>
+        </div>
+     </div>
 </body>
 </html>
    <script>
@@ -381,11 +540,15 @@
         /* id set for image and use in css */
         var src_health_image=child_image.setAttribute("src",ele.image_url);
         var alt_health_image=child_image.setAttribute("alt",ele.care_listname);
+        var childdiv=document.createElement("div");
+        childdiv.setAttribute("id","productpage_name_div");
         var child_name=document.createElement("p");
         child_name.innerText=ele.care_listname;
         var offertag=document.createElement("p");
         offertag.innerText=ele.offer_ptag;
-        healthcare_childdiv.append(child_image,child_name,offertag);
+        
+        childdiv.append(child_name,offertag);
+        healthcare_childdiv.append(child_image,childdiv);
         document.getElementById("product-items-box").append(healthcare_childdiv);
 
      })
