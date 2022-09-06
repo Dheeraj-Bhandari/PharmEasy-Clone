@@ -71,6 +71,7 @@
             padding: 5px 30px;
             justify-content: space-between;
         }
+        
         .product img{
             height: 80px;
             width: 80px;
@@ -84,7 +85,10 @@
             justify-content: space-between;
             margin-bottom: 25px;
             color: #dfe3e6;
-            font-size: 20px;
+            font-size: x-large;
+        }
+        #total{
+            font-weight: 1000;
         }
         .container > p{
             width: 80%;
@@ -179,6 +183,23 @@
             height: 3%;
             margin: 20px;
 
+        }
+        #codeText{
+            cursor: pointer;
+        }
+        .footer{
+            width: 100%;
+            /* padding: 20%; */
+            margin: auto;
+            /* overflow: hidden; */
+            overflow: auto;
+        }
+        #FooterLinks{
+            padding: 0 10%;
+        }
+        #FooterPayment{
+            margin-top: -16px;
+            padding: 15px 10%;
         }
 
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
@@ -316,7 +337,7 @@
         <div id="jsPart">
             <div>
                 <p>Total No. of Offers</p>
-                <h6>0</h6>
+                <h6 id="total">0</h6>
             </div>
             <div>
                 <p>Total No. of Offers</p>
@@ -417,102 +438,101 @@
         </div>
 
         <!-- Footer -->
-        <div id="FooterLinks">
-            <div id="FooterDiv1">
-                <p>Company</p>
-                <ul>About us</ul>
-                <ul>Careers</ul>
-                <ul>Blog</ul>
-                <ul>Partner with PharmEasy</ul>
-                <ul>Partner with PharmEasy</ul>
-    
-                <!-- <br> -->
-                <p>Our Services</p>
-                <ul>Order Medicine</ul>
-                <ul>Healthcare Products</ul>
-                <ul>Lab Tests</ul>
-            </div>
-    
-            <div id="FooterDiv2">
-                <p>Features Categories</p>
-                <ul>Covid Essentials</ul>
-                <ul>Personal Care</ul>
-                <ul>Health Food and Drinks</ul>
-                <ul>Beauty</ul>
-                <ul>Skin Care</ul>
-                <ul>Home Care</ul>
-                <ul>Ayurvedic Care</ul>
-                <ul>Sexual Wellness</ul>
-                <ul>Sexual Wellness</ul>
-                <ul>Fitness Supplements</ul>
-                <ul>Mother and Baby Care</ul>
-                <ul>Healthcare Devices</ul>
-                <ul>Health Condition</ul>
-                <ul>Diabetic Care</ul>
-                <ul>Elderly Care</ul>
-                <ul>Accessories And Wearables</ul>
-                <ul>Top Products</ul>
-            </div>
-    
-            
-            <div id="FooterDiv3">
-                <p>Need Help</p>
-                <ul>Browse All Molecules</ul>
-                <ul>Browse All Cities</ul>
-                <ul>Browse All Areas</ul>
-                <ul>Browse All Stores</ul>
-    
-                <!-- <br> -->
-                <p>FAQs</p>
-                <ul>Policy Info</ul>
-                <ul>Editorial Policy</ul>
-                <ul>Privacy Policy</ul>
-                <ul>Vulnerability Disclosure Policy</ul>
-                <ul>Terms and Conditions</ul>
-                <ul>Customer Support Policy</ul>
-                <ul>Return Policy</ul>
-            </div>
-    
-            <div id="FooterDiv4">
-                <p>Follow us on</p>
-                <div id="Footer4SocialMediaIcon">
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-youtube"></i>
-                    <i class="fa-brands fa-twitter"></i>
+        <div class="footer">
+
+            <div id="FooterLinks">
+                <div id="FooterDiv1">
+                    <p>Company</p>
+                    <ul>About us</ul>
+                    <ul>Careers</ul>
+                    <ul>Blog</ul>
+                    <ul>Partner with PharmEasy</ul>
+                    <ul>Partner with PharmEasy</ul>
+        
+                    <!-- <br> -->
+                    <p>Our Services</p>
+                    <ul>Order Medicine</ul>
+                    <ul>Healthcare Products</ul>
+                    <ul>Lab Tests</ul>
                 </div>
+        
+                <div id="FooterDiv2">
+                    <p>Features Categories</p>
+                    <ul>Covid Essentials</ul>
+                    <ul>Personal Care</ul>
+                    <ul>Health Food and Drinks</ul>
+                    <ul>Beauty</ul>
+                    <ul>Skin Care</ul>
+                    <ul>Home Care</ul>
+                    <ul>Ayurvedic Care</ul>
+                    <ul>Sexual Wellness</ul>
+                    <ul>Sexual Wellness</ul>
+                    <ul>Fitness Supplements</ul>
+                    <ul>Mother and Baby Care</ul>
+                    <ul>Healthcare Devices</ul>
+                    <ul>Health Condition</ul>
+                    <ul>Diabetic Care</ul>
+                    <ul>Elderly Care</ul>
+                    <ul>Accessories And Wearables</ul>
+                    <ul>Top Products</ul>
+                </div>
+        
+                
+                <div id="FooterDiv3">
+                    <p>Need Help</p>
+                    <ul>Browse All Molecules</ul>
+                    <ul>Browse All Cities</ul>
+                    <ul>Browse All Areas</ul>
+                    <ul>Browse All Stores</ul>
+        
+                    <!-- <br> -->
+                    <p>FAQs</p>
+                    <ul>Policy Info</ul>
+                    <ul>Editorial Policy</ul>
+                    <ul>Privacy Policy</ul>
+                    <ul>Vulnerability Disclosure Policy</ul>
+                    <ul>Terms and Conditions</ul>
+                    <ul>Customer Support Policy</ul>
+                    <ul>Return Policy</ul>
+                </div>
+        
+                <div id="FooterDiv4">
+                    <p>Follow us on</p>
+                    <div id="Footer4SocialMediaIcon">
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                    </div>
+                </div>
+        
+                
+        
             </div>
-    
+        
+            <div id="FooterPayment">
+                <p id="FooterPaymentPatnerP">Our Payment Partners</p>
+                <div id="paymentimg">
+                 <img src="https://assets.pharmeasy.in/apothecary/images/gpay.png?dim=1440x0" alt="">
+                 <img src="https://assets.pharmeasy.in/apothecary/images/paytm.png?dim=1440x0" alt="">
+                 <img src="https://assets.pharmeasy.in/apothecary/images/phonepe.png?dim=1440x0" alt="">
+                 <img src="https://assets.pharmeasy.in/apothecary/images/amazon.png?dim=1440x0" alt="">
+                 <img src="https://assets.pharmeasy.in/apothecary/images/mobikwik.png?dim=1440x0" alt="">
+                 <img src="https://assets.pharmeasy.in/apothecary/images/olamoney.png?dim=1440x0" alt="">
+                 <img src="https://assets.pharmeasy.in/apothecary/images/maestro.png?dim=1440x0" alt="">
+                 <img src="https://assets.pharmeasy.in/apothecary/images/mastercard.png?dim=1440x0" alt="">
+                 <img src="https://assets.pharmeasy.in/apothecary/images/visa.png?dim=1440x0" alt="">
+                 <img src="https://assets.pharmeasy.in/apothecary/images/rupay.png?dim=1440x0" alt="">
+                 <p>© 2022 PharmEasy. All Rights Reserved</p>
+                </div>
+             </div>
             
-    
         </div>
-    
-        <div id="FooterPayment">
-            <p id="FooterPaymentPatnerP">Our Payment Partners</p>
-            <div id="paymentimg">
-             <img src="https://assets.pharmeasy.in/apothecary/images/gpay.png?dim=1440x0" alt="">
-             <img src="https://assets.pharmeasy.in/apothecary/images/paytm.png?dim=1440x0" alt="">
-             <img src="https://assets.pharmeasy.in/apothecary/images/phonepe.png?dim=1440x0" alt="">
-             <img src="https://assets.pharmeasy.in/apothecary/images/amazon.png?dim=1440x0" alt="">
-             <img src="https://assets.pharmeasy.in/apothecary/images/mobikwik.png?dim=1440x0" alt="">
-             <img src="https://assets.pharmeasy.in/apothecary/images/olamoney.png?dim=1440x0" alt="">
-             <img src="https://assets.pharmeasy.in/apothecary/images/maestro.png?dim=1440x0" alt="">
-             <img src="https://assets.pharmeasy.in/apothecary/images/mastercard.png?dim=1440x0" alt="">
-             <img src="https://assets.pharmeasy.in/apothecary/images/visa.png?dim=1440x0" alt="">
-             <img src="https://assets.pharmeasy.in/apothecary/images/rupay.png?dim=1440x0" alt="">
-             <p>© 2022 PharmEasy. All Rights Reserved</p>
-            </div>
-         </div>
-        
-           
-    
-        
-    
-        
     
     </div>
 </body>
 </html>
+<script src="https://kit.fontawesome.com/09ea9ed7f5.js" crossorigin="anonymous"></script>
 
 <script>
     var offersObj = [
@@ -529,7 +549,7 @@
         {
             offer_type:"Payment",
             img_url:"https://cms-contents.pharmeasy.in/offer/9e4ef43119d-hsbc.jpg",
-            offer_name:"Flat 10% cashback upto Rs.150 on HSBC cashback credit card",
+            offer_name:"10% cashback upto Rs.150 on HSBC cashback credit card",
             offer_dec:"Valid once per user on transaction above Rs. 1000",
             code:"PEHSBC",
             min_payment:"1000",
@@ -539,13 +559,13 @@
             img_url:"https://cms-contents.pharmeasy.in/offer/702efbbe2e6-au.jpg",
             offer_name:"Flat Rs. 150 Off on AU Bank debit and credit card",
             offer_dec:"Valid once per user on transactions above ₹1200",
-            code:"PEAUBANK",
+            code:"AUBANK",
             min_payment:"1200",
         },
         {
             offer_type:"Payment",
             img_url:"https://cms-contents.pharmeasy.in/offer/61f3dfe3705-OlaMoney.png",
-            offer_name:"Get minimum ₹50 amd up to ₹1000 cashback via OlaMoney Postpaid+",
+            offer_name:"Get min ₹50 amd up to ₹1000 cashback via OlaMoney.",
             offer_dec:"Offer valid on transactions above ₹499",
             code:"5CASHB",
             min_payment:"499",
@@ -553,9 +573,9 @@
         {
             offer_type:"Payment",
             img_url:"https://cms-contents.pharmeasy.in/offer/8cdf65ac110-mobiwiklogo.png",
-            offer_name:"Get up to ₹650 cashback via Mobikwik. Use code MBK650 on Mobikiwik",
-            offer_dec:"Use code MBK650 while paying on Mobikwik, enjoy up to ₹650 cashback on PharmEasy (valid on transaction above ₹800",
-            code:"5CASHB",
+            offer_name:"Get up to ₹650 cashback via Mobikwik.",
+            offer_dec:"Enjoy up to ₹650 cashback on PharmEasy (valid on transaction above ₹800",
+            code:"MOBI",
             min_payment:"800",
         },
         {
@@ -563,7 +583,7 @@
             img_url:"https://cms-contents.pharmeasy.in/offer/29e0c8c1469-LOGO_Freecharge%20(1).png",
             offer_name:"Get flat ₹35 cashback on minimun transaction of ₹499 , valid once per user",
             offer_dec:"Offer applicable once per user.",
-            code:"5CASHB",
+            code:"FLAT",
             min_payment:"0",
         },
         {
@@ -571,15 +591,15 @@
             img_url:"https://cms-contents.pharmeasy.in/offer/66c681514ce-LOGO-32.png",
             offer_name:"Get Flat ₹80 cashback via Airtel Payments Bank.",
             offer_dec:"Offer valid on transactions above ₹600 for first-time users of Airtel Payments Bank/Airtel Money Wallet on Pharmesy.",
-            code:"5CASHB",
+            code:"AIRTEL",
             min_payment:"",
         },
         {
             offer_type:"Medicine",
             img_url:"https://cms-contents.pharmeasy.in/offer/6901b462e6d-icicinew.jpg",
-            offer_name:"Get flat Rs.250 instant discount on ICICI Debit & Credit cards",
-            offer_dec:"Instant discount will be applied on the payment page on adding the correct Debit or Credit card details. Offer valid on transactions above ₹",
-            code:"Offer Expired",
+            offer_name:"Get flat Rs.250 instant discount on ICICI Credit cards",
+            offer_dec:"Instant discount will be applied on the payment page on adding the correct Debit or Credit card details.",
+            code:"ICICI",
             min_payment:"0",
         },
         {
@@ -587,7 +607,7 @@
             img_url:"https://cms-contents.pharmeasy.in/offer/c1f24ab42f8-TheMomsCoLogo.png",
             offer_name:"Extra 10% off on the Moms Co.",
             offer_dec:"Get extra 10% off on The Moms Co.' Products",
-            code:" NEWTEN",
+            code:"NEWTEN",
             min_payment:"0",
         },
         {
@@ -617,7 +637,7 @@
         {
             offer_type:"Healthcare",
             img_url:"https://cms-contents.pharmeasy.in/offer/60165886431-ten_per.jpg",
-            offer_name:"Get extra 10% off on Everherb, Liveasy or PharmEasy products",
+            offer_name:"Get extra 10% off on Everherb.",
             offer_dec:"Buy 2 same products of Everherb or Liveeasy or PharmEasy and get additional 10% Off",
             code:"ELP10",
             min_payment:"0",
@@ -634,8 +654,8 @@
             offer_type:"Healthcare",
             offer_type:"Medicine",
             img_url:"https://cms-contents.pharmeasy.in/offer/ffe388c05d3-Veet_Logo.jpg",
-            offer_name:"Flat 15% off on Veet",
-            offer_dec:"Get flat 15% off on Veet products",
+            offer_name:"Flat 15% off on Veet. Enjoy buying Veet products",
+            offer_dec:"Get flat 15% off on every Veet products",
             code:"VEET15",
             min_payment:"0",
         },
@@ -649,9 +669,116 @@
         },
     ];
     
-    offersObj.map(function(elem,index){
+
+    displayProducts(offersObj);
+    document.getElementById("all").style.background = "#3bb896"
+    document.getElementById("all").style.color = "white"
+    document.getElementById("total").innerText = offersObj.length;
+
+    document.querySelector("#all").addEventListener("click",allArr);
+    document.querySelector("#payment").addEventListener("click",paymentArr);
+    document.querySelector("#medicine").addEventListener("click",medicineArr);
+    document.querySelector("#diagnostic").addEventListener("click",diagnosticArr);
+    document.querySelector("#healthcare").addEventListener("click",healthcareArr);
+
+    function allArr(){
+        // displayProducts(output);
+        // console.log("Hello Payment");
+        displayProducts(offersObj);
+        document.getElementById("all").style.background = "#3bb896"
+        document.getElementById("all").style.color = "white"
+        document.getElementById("medicine").style.background = ""
+        document.getElementById("medicine").style.color = ""
+        document.getElementById("diagnostic").style.background = ""
+        document.getElementById("diagnostic").style.color = ""
+        document.getElementById("payment").style.background = ""
+        document.getElementById("payment").style.color = ""
+        document.getElementById("healthcare").style.background = ""
+        document.getElementById("healthcare").style.color = ""
+        document.getElementById("total").innerText = offersObj.length;
+    }
+
+    function paymentArr(){
+        var output = offersObj.filter(function(elem,index){
+            return elem.offer_type === "Payment"
+        });
+        displayProducts(output);
+        // console.log("Hello Payment");
+        document.getElementById("payment").style.background = "#3bb896"
+        document.getElementById("payment").style.color = "white"
+        document.getElementById("all").style.background = ""
+        document.getElementById("all").style.color = ""
+        document.getElementById("medicine").style.background = ""
+        document.getElementById("medicine").style.color = ""
+        document.getElementById("diagnostic").style.background = ""
+        document.getElementById("diagnostic").style.color = ""
+        document.getElementById("healthcare").style.background = ""
+        document.getElementById("healthcare").style.color = ""
+        document.getElementById("total").innerText = output.length;
+    }
+    function diagnosticArr(){
+        var output = offersObj.filter(function(elem,index){
+            return elem.offer_type === "Diagnostic"
+        });
+        displayProducts(output);
+        console.log("Hello Diagnostic");
+        document.getElementById("diagnostic").style.background = "#3bb896"
+        document.getElementById("diagnostic").style.color = "white"
+        document.getElementById("payment").style.background = ""
+        document.getElementById("payment").style.color = ""
+        document.getElementById("all").style.background = ""
+        document.getElementById("all").style.color = ""
+        document.getElementById("medicine").style.background = ""
+        document.getElementById("medicine").style.color = ""
+        document.getElementById("healthcare").style.background = ""
+        document.getElementById("healthcare").style.color = ""
+        document.getElementById("total").innerText = output.length;
+    }
+    function medicineArr(){
+        var output = offersObj.filter(function(elem,index){
+            return elem.offer_type === "Medicine"
+        });
+        displayProducts(output);
+        console.log("Hello Medicine");
+        document.getElementById("medicine").style.background = "#3bb896"
+        document.getElementById("medicine").style.color = "white"
+        document.getElementById("diagnostic").style.background = ""
+        document.getElementById("diagnostic").style.color = ""
+        document.getElementById("payment").style.background = ""
+        document.getElementById("payment").style.color = ""
+        document.getElementById("all").style.background = ""
+        document.getElementById("all").style.color = ""
+        document.getElementById("healthcare").style.background = ""
+        document.getElementById("healthcare").style.color = ""
+        document.getElementById("total").innerText = output.length;
+    }
+    function healthcareArr(){
+        var output = offersObj.filter(function(elem,index){
+            return elem.offer_type === "Healthcare"
+        });
+        displayProducts(output);
+        console.log("Hello Healthcare");
+        document.getElementById("healthcare").style.background = "#3bb896"
+        document.getElementById("healthcare").style.color = "white"
+        document.getElementById("medicine").style.background = ""
+        document.getElementById("medicine").style.color = ""
+        document.getElementById("diagnostic").style.background = ""
+        document.getElementById("diagnostic").style.color = ""
+        document.getElementById("payment").style.background = ""
+        document.getElementById("payment").style.color = ""
+        document.getElementById("all").style.background = ""
+        document.getElementById("all").style.color = ""
+        document.getElementById("total").innerText = output.length;
+    }
+
+
+    function displayProducts(arr){
+        document.querySelector("#products").innerText = "";
+
+        arr.map(function(elem,index){
         var divProduct = document.createElement("div");
         divProduct.setAttribute("class","product");
+
         var div1 = document.createElement("div");
         var productImg = document.createElement("img");
         productImg.setAttribute("src",elem.img_url);
@@ -668,11 +795,24 @@
         paraCode.innerText = elem.code;
         var paraFix = document.createElement("p");
         paraFix.innerText = "Copy Code";
+        paraFix.setAttribute("id","codeText");
+        paraFix.addEventListener("click",function(){
+            displayFun(elem);
+        });
         div2.append(paraCode,paraFix);
         divProduct.append(div1,div2);
         document.querySelector("#products").append(divProduct);
-        console.log("Hello Dear");
+        // console.log("Hello Dear");
     });
-    console.log("Hello Dear");
+
+    };
+
+    function displayFun(elem,index){
+        navigator.clipboard.writeText(elem.code);
+        alert(elem.code +" copy to your clipboard");
+
+    }
 
 </script>
+
+
