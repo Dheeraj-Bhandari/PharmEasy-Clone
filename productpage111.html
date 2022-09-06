@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #navbar-top-mainbox-p{
+            display: flex;
+            
+            /* justify-content: space-around; */
+        }
+        #navbar-top-mainbox-p>div{
+            margin: auto;
+        }
+        #navbarLogin{
+            cursor: pointer;
+
+        }
+        #belowNavbarinput :placeholder-shown{
+            margin: 5px;
+            border-radius: 15px;
+        }
+        #BelownavbarSearchButton{
+    /* display: flex; */
+    width: 100px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    background-color: #10847e;
+    border-radius: 10px;
+    justify-content: center;
+    transition: transform 0.2s ease 0s, background-color 0.1s ease-in 0s;
+    color: white; 
+        }
+        /* #navbar-search-button-product{
+            color: white;
+            background-color: cadetblue;
+            border-radius: 10px;
+        }
+        #navbar-top-search-placeholder-product{
+            border-radius: 10px;
+        } */
+        
+        #navbar-bottom-box-p{
+            display: flex; 
+            background-color: rgb(238, 244, 255);
+            align-items: center;
+            padding: 1%;
+             
+        }
+        #navbar-bottom-box-p>div{
+            margin: auto;
+        }
+        div>button{
+           border: 0; 
+           cursor: pointer;
+           background-color: transparent;
+        }
+        /* navbar product part end here */
+        #product-items-box{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            width: 80%;
+            gap: 20px;
+            margin: auto;
+        }
+        #product-items-box>div{
+            display: flex;
+            justify-content: space-around;
+            cursor: pointer;
+            /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+            border-radius: 10px;
+        
+        }
+        #product-items-box>div:hover{
+         box-shadow: rgba(0,0,0,0.24)0px 3px 8px;
+         border: 1px solid #E6EBF4;
+        }
+        font-face {
+            font: Montserrat;
+        }
+        body, button, input, textarea {
+         font-family: Open Sans,sans-serif;
+          font-size: 16px;
+          color: #4f585e;
+       }
+     #health_image{
+        width: 40%;
+     }
+     #button_box_navbar>button{
+        background-color: rgb(238, 244, 255);
+        color:  #30363c;
+     }
+     #documentation_product{
+        width: 80%;
+        display: grid;
+        grid-column-start: auto;
+        margin-inline-start: 10%;
+     }
+     /* sliding image css property */
+     @keyframes slider-key-next {
+    0% {left: 100%; }
+    100% {left: 0; }
+  }
+  @keyframes slider-key-left {
+    0% {left: 0; }
+    100% {left: -100%; }
+  }
+  @keyframes slider-key-previous {
+    0% {left: -100%; }
+    100% {left: 0; }
+  }
+  @keyframes slider-key-right {
+    0% {left: 0; }
+    100% {left: 100%; }
+  }
+  .slider {
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    
+  }
+  .slider > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+  }
+  .slider > ul > li {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    visibility: hidden;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  .slider > ul > li.active {visibility: visible; left: 0; }
+  .slider > ul > li.left {animation-name: slider-key-left; }
+  .slider > ul > li.next {animation-name: slider-key-next; }
+  .slider > ul > li.right {animation-name: slider-key-right; }
+  .slider > ul > li.previous {animation-name: slider-key-previous; }
+ /* cursol Style */
+  .slider {
+    max-width: 80%;
+    max-height: 350px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  }
+  
+  .slider > button {
+    transition: 0.3s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: #FAFAFA;
+    opacity: 0.5;
+    border: 0;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 100%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .slider > button:hover {
+    opacity: 1;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  }
+  .slider > button:nth-child(2) {
+    left: 10px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAEAUlEQVR4Xu3dO24UQRCAYftYcAGfABFa4nUciDEcgQCJOwAShCBE7hMACY+A7mAly7K9NdNd1fX4LU0A9M5M1/8x3iUwpyd8lZ7Aaends/kTABRHAAAAFJ9A8e3zBABA8QkU3z5PAAAUn0Dx7fMEAEDxCRTfPk8AAJSdwOO282/teF92Am3jVZ8Az9reX7bjVzvOKiOoCOAQ//AXvzSCagCuxy+PoBKA2+KXRlAFwLH4ZRFUACCNXxJBdgBb419FcK/94kv2j4iZAeyN35u/bcfDdvwBQMwJEF/YLeMTgPjC+H1ZNgDE3xA/GwDib4yfCQDxd8TPAoD4O+NnAED8gfjRARB/MH5kAMSfED8qAOJPih8RAPEnxo8GgPiT40cCQHyF+FEAEF8pfgQAxFeM7x0A8ZXjewZAfIP4XgEQ3yi+RwDEN4zvDQDxjeN7AkD8BfG9ACD+ovgeABB/YfzVAIi/OP5KAMR3EH8VAOI7ib8CAPEdxbcGQHxn8S0BEN9hfCsAxHca3wIA8R3H1wZAfOfxNQEQP0B8LQDEDxJfAwDxA8WfDYD4weLPBED8gPFnARiJ/6ndxIt2/As6P6+3/aHd2KXk5kZ/RtBIfMn9sWbfBB60l72RvHQEAPElE16zRh0A8deElV5VFQDxpRnWrVMDQPx1UbdcGQBbppVwrRqAPqun7bhIOLRMW1IF0Af1pB2vMk0s2V7UAfR59f92rSMY+SiZbO5utmMCoO/2UTteg8BN+MONmAEYRfC5neB5O/66G2HsG/rYbt/kn4IPYxp5ErxrJ+lif8eeecy7n/n9GwQBDcwEMPrtgCfBAkCzAYBgQcSRS2oAAMFIEePXagEAgXHIvZfTBACCvVUMX6cNAASGMfdcygIACPaUMXqNFQAQGAXdehlLACDYWsdgvTUAEBhE3XKJFQBAsKWQ8tpVAECgHFZ6+pUAQCCtpLhuNQAQKMaVnNoDABBISimt8QIABEqBj53WEwAQHKul8OfeAIBAIfJdp/QIAASGCLwCAIERAs8AQGCAwDsAECgjiAAABIoIogAAgRKCSABAoIAgGgAQTEYQEQAIJiKICgAEkxBEBgCCCQiiAwDBIIIMAEAwgCALABDsRJAJAAh2IMgGAAQbEWQEAIINCLICAIEQQWYAIwh+tBffb8dX4RzDLssOYA+CHv+sHf1n7aX/qgBgC4JS8ftgqgCQICgXvxqAuxCUjF8RwE0IysavCuAqgp+V3vDd9I620nuA6/s/b7/xvcq7/ds+zlQGkP4jnmSDAJBMKfEaACSOK9kaACRTSrwGAInjSrYGAMmUEq8BQOK4kq0BQDKlxGsAkDiuZGsAkEwp8RoAJI4r2RoAJFNKvOY/NR8wkHwupfAAAAAASUVORK5CYII=);
+  }
+  .slider > button:nth-child(3) {
+    right: 10px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAEDklEQVR4Xu3cTW5TMRSG4XSAQMASmHUOEkwAiQ0gMWQBIFaAWA8qYgZijFhA1wXnQkPTNsn133GP/b2VPKjqe22f74nj3kg52fAjXYET6dWz+A0AxBEAAADiFRBfPjsAAMQrIL58dgAAiFdAfPnsAAAQr4D48tkBACBegc3mlVXg1NqZYiXUd4Al/J/W7lv7YO2zGgJlANvwH1yE/lsRgSqA6+FvX/hyCBQBHApfEoEagLXw5RAoAUgNXwqBCoAnluq5te2BL/WwP/2ZQAXAXUv8u7U3qcnv9JsagQqAJU8Q7NGvBAAEAPhbAXaCHQhqO8B26SC4qIQqAHYCAPB2sFRAeQfg7QAA/09DsmcCdoDLE7EkAgBc/d9YDgEAbj4ckUIAgP0fDsggAMDhT4ckEADg+MeD0yMAwPrnw1MjAMA6gKkfGwMgDcC0CACQDmBKBADIAzAdAgDkA5gKAQDKAEyDAADlAKZAAIA6AMMjAEA9gKERAKANgGERAKAdgCERAKAtgOEQAKA9gKEQAMAHwDAIAOAHYAgEAPAFEB4BAPwBhEYAgD4AwiIAQD8AIREAoC+AcAgA0B9AKAQAuB0AYRDkAHhks35xe/WacuQ7tqqP1p4VrK7Jt5flAHhrk/xWMFEu8atANQIA+IXT685VCADQKybfcYoRAMA3mJ53L0IAgJ4R+Y+VjQAA/qH0HAEAPasdbKwl/PfWznLmxQ6QU624fZfw31n7kjtFAORWLF7/4vCXpQAgXqA5M6oKPxfA8ij4ec7s6LtageVR8CdrT1d73uxQHX4ugII5csmRCtyzv/2w9rqgSk3CB0BB5RtdEiJ8ADRKM/M2YcIHQGZyDbqHCh8ADRLNuEW48AGQkV5l15DhA6Ay1cTLw4YPgMQEK7qFDh8AFckmXBo+fAAkpFjYZYjwAVCY7splw4QPgPYAhgofAG0BDBc+ANoBGDJ8ALQBMGz4AKgHMHT4AKgDMHz4ACgHMEX4ACgDME34AMgHMFX4AMgDMF34AEgHMGX4AEgDMG34AFgHMHX4ADgOYPrwAXAYgET4ANgPQCZ8ANwEIBU+AK4CkAsfAJcAJMMHwD8AsuEDQDx8dQDSr/ztu1/OV8SsPzcbpwfhX2SlCIDwd16oagAI/9ourQSA8Pe8RasAIPwD5zMVAI9t/efWHmaeU5t9G1fmuN26qwBYCvrS2q8MBNOHr/gcIBWBRPiKAFJ2ApnwVQEcQyAVvjKAfQjkwlcHsIvggf1S9H373Y7rTgMp/RdwqITLwfDU2lenGoe+LQBCx+M/OQD41zj0CAAIHY//5ADgX+PQIwAgdDz+kwOAf41DjwCA0PH4Tw4A/jUOPQIAQsfjPzkA+Nc49AgACB2P/+QA4F/j0CP8AQt1MpCfJsp4AAAAAElFTkSuQmCC);
+  }
+  .slider > ul > li > img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    left: 0;
+    top: 0;
+  }
+  .slider > ul > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+  .slider > ul > li h1,
+  .slider > ul > li p {
+    position: relative;
+    padding: 0 15%;
+    color: #fff;
+    font-family: sans-serif;
+  }
+
+   
+    </style>
+    <script src="https://kit.fontawesome.com/35eac37102.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div id="navbar-top-mainbox-p">
+    <div>
+        <img src="https://assets.pharmeasy.in/apothecary/images/logo_big.svg?dim=360x0" alt="main-logo-p">
+    </div>
+    <div>
+        <p>Express Delivery To</p>
+        <button>Select Pincode</button>
+    </div>
+    <!-- <div id="navbar-top-search-placeholder-div">
+        <input id="navbar-top-search-placeholder-product" type="text" placeholder="Search for Medicine and Healthcare item" >
+        <button id="navbar-search-button-product">Search</button>
+    </div> -->
+    <div id="belowNavbarinput">
+        <i id="belownavbarSearchIcon" class="fa-sharp fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder=" Search For Medicine">
+        <button id="BelownavbarSearchButton"> Search</button>
+    </div>
+    <div id="navbarLogin">
+        <p id="loginbtn"> <i class="fa-solid fa-user"></i> Hello, Log In</p>
+    </div>
+    <div>
+        <!-- <i class="fa-light fa-tire-rugged"></i> -->
+        <i class="fa-sharp fa-solid fa-tire-rugged"></i>
+        <button>Offers</button>
+    </div>
+    <div>
+         <!-- <i class="fa-regular fa-cart-shopping"></i> -->
+         <i class="fa-sharp fa-solid fa-cart-shopping-fast"></i>
+        <button>Cart</button>
+    </div>
+    </div>
+    <div id="navbar-bottom-box-p">
+        <div id="button_box_navbar">
+      <button>Medicine</button>
+      <button>Healthcare</button>
+      <button>Lab Tests</button>
+      <button>Offers</button>
+      <button>Plus</button>
+      <button>Health Blogs</button>
+        </div>
+    </div>
+    <!-- Navbar part end here -->
+    <!-- Sliding Image Section -->
+    <div class="slider">
+        <ul>
+
+            <li><img src="https://cdn01.pharmeasy.in/dam/banner/banner/3b9fe7e817e-GRAND1000_App.jpg"></li>
+            <li><img src="https://cdn01.pharmeasy.in/dam/banner/banner/b17563f040c-times15_App.jpg"></li>
+            <li><img src="https://cdn01.pharmeasy.in/dam/banner/banner/29cf7cbba10-Liveasydiabeticslippers_1_App.jpg">
+            </li>
+        </ul>
+        <!-- left -->
+        <button></button>
+        <!-- right -->
+        <button></button>
+    </div>
+
+  <!-- product item box start here -->
+    <div>
+    <div id="product-items-box">
+    </div> 
+    </div>
+    <div>
+        <div id="documentation_product"></div>
+    </div>
+</body>
+</html>
+   <script>
+   var healthcare_data=[
+    {
+    image_url:"https://cdn01.pharmeasy.in/dam/discovery/categoryImages/6d462f424a43372ea8b7b6f8ca13e052.png",
+    care_listname: "Covid Essentials" ,
+    offer_ptag: "Upto 77% off",
+    },
+    {
+    image_url:"https://cdn01.pharmeasy.in/dam/discovery/categoryImages/9f446c0e74273d70b0baf85e4ff0f76a.png",
+    care_listname:"Personal Care",
+    offer_ptag:"Upto 80% off",
+    },
+    {
+    image_url:"https://cdn01.pharmeasy.in/dam/discovery/categoryImages/aace6d1f0dc03f1f8c6e26dd880e1934.png",
+    care_listname:"Health Food and Drinks",
+    offer_ptag:"Upto 57% off",
+    },
+    {
+    image_url:"https://cdn01.pharmeasy.in/dam/discovery/categoryImages/3c7ab4d29c6631f7a5cb7eafd3bfbc79.png",
+    care_listname:"Beauty",
+    offer_ptag:"Upto 35% off",
+    },
+    {
+    image_url:"https://cdn01.pharmeasy.in/dam/discovery/categoryImages/9b3ad6971475304e9e1614ac30d4545a.png",
+    care_listname:"Skin Care",
+    offer_ptag:"Upto 50% off",
+    },
+    {
+    image_url:"https://cdn01.pharmeasy.in/dam/discovery/categoryImages/dc96175686f135b5a22d1e57165d0246.png",
+    care_listname:"Home Care",
+    offer_ptag:"Upto 35% off",
+    },
+    {
+    image_url:"https://cdn01.pharmeasy.in/dam/discovery/categoryImages/ecad9a974e003fb987858b3ee81413c6.png",
+    care_listname:"Ayurvedic Care",
+    offer_ptag:"Upto 80% off",
+    },
+    {
+    image_url:"https://cdn01.pharmeasy.in/dam/discovery/categoryImages/f970ef9868093acb9d1d37a9387912f9.png",
+    care_listname:"Sexual Wellness",
+    offer_ptag:"Upto 80% off",
+    },
+    {
+    image_url:"https://cdn01.pharmeasy.in/dam/discovery/categoryImages/9cf0c849550a38109738815b3fc2fac6.png",
+    care_listname:"Fitness Supplements",
+    offer_ptag:"Upto 80% off",
+    },
+    {
+    image_url:"https://cdn01.pharmeasy.in/dam/discovery/categoryImages/efdbfba5bfbb3b809728b627e7dfa118.png",
+    care_listname:"Mother and Baby Care",
+    offer_ptag:"Upto 80% off",
+    },
+    {
+    image_url:"https://cdn01.pharmeasy.in/dam/discovery/categoryImages/ac80578390a23bcfb1ed5a4551886ea7.png",
+    care_listname:"Healthcare Devices",
+    offer_ptag:"Upto 80% off",
+    },
+    {
+    image_url:"https://cdn01.pharmeasy.in/dam/discovery/categoryImages/37d0f796c7f738f5bd19c79c54a31e2e.png",
+    care_listname:"Health Condition",
+    offer_ptag:"Upto 80% off",
+    },
+    {
+    image_url:"https://cdn01.pharmeasy.in/dam/discovery/categoryImages/cd33b9cc70173211b7c7ccb46b54f36b.png",
+    care_listname:"Diabetic care",
+    offer_ptag:"Upto 80% off",
+    },
+    {
+    image_url:"https://cdn01.pharmeasy.in/dam/discovery/categoryImages/2d8f0b5c034735a08ff13325d72bafbe.png",
+    care_listname:"Elderly Care",
+    offer_ptag:"Upto 80% off",
+    },
+    {
+    image_url:"https://cdn01.pharmeasy.in/dam/discovery/categoryImages/3e89810029f93c6d8918865f74c0acb3.png",
+    care_listname:"Accessories and Wearable",
+    offer_ptag:"Upto 80% off",
+    },
+    {
+    image_url:"https://cdn01.pharmeasy.in/dam/discovery/categoryImages/f10917087a483040b557e4b18204312c.png",
+    care_listname:"Top Products",
+    offer_ptag:"Upto 80% off",
+    }
+     ]
+
+     healthcare_data.map(function(ele,index){
+        var healthcare_childdiv=document.createElement("div");
+        var child_image=document.createElement("img");
+        child_image.setAttribute("id","health_image");
+        /* id set for image and use in css */
+        var src_health_image=child_image.setAttribute("src",ele.image_url);
+        var alt_health_image=child_image.setAttribute("alt",ele.care_listname);
+        var child_name=document.createElement("p");
+        child_name.innerText=ele.care_listname;
+        var offertag=document.createElement("p");
+        offertag.innerText=ele.offer_ptag;
+        healthcare_childdiv.append(child_image,child_name,offertag);
+        document.getElementById("product-items-box").append(healthcare_childdiv);
+
+     })
+     var documentation=[
+        {
+            heading_name1:"Shop Safely And Worry-Free On PharmEasy",
+            paragraph_name:"PharmEasy is a renowned name in the online shopping of Over The Counter or healthcare products and other daily essentials. Ordering online on PharmEasy is convenient, fast and hassle-free; you can avoid the annoyance of queuing up at your local pharmacy and also avail of huge discounts of up to 80% OFF. Purchasing the healthcare requirements such as medical devices and nutritional supplements that you need will no longer burn a hole in your pocket. At PharmEasy, you are sure to find everything that you need because we have products across all healthcare categories.",
+        },
+        {
+            heading_name1:"Our most popular categories",
+            paragraph_name:"We have a range of categories and products, some which are:",
+        },
+        {
+            heading_name1:"Devices",
+            paragraph_name:"With the pandemic upending our lives, we have all realized that there are some medical devices that we need to keep in our homes such as Oximeter, Thermometer, Inhaler, Blood pressure monitor, Glucometer.",
+        },
+        {
+            heading_name1:"Personal care",
+            paragraph_name:"Personal care products can include a wide range of products such as Bath products, , Skincare essentials, Razor blades, Toothpaste and toothbrush, Wet wipes, Lip balm, Face masks, Hand sanitizer, etc.",
+        },
+        {
+            heading_name1:"Nutrition and fitness supplements",
+            paragraph_name:"To give your health a helping hand, you can order a wide variety of health supplements including Health drinks, Nutritional powder, Nutrition tablets/capsules.",
+        }
+
+     ]
+     documentation.map(function(elem,index){
+        var documentation_div=document.createElement("div");
+        var product_heading1=document.createElement("h2");
+        product_heading1.innerText=elem.heading_name1;
+        var paragraph_product1=document.createElement("p");
+        paragraph_product1.innerText=elem.paragraph_name;
+        documentation_div.append(product_heading1,paragraph_product1);
+        document.getElementById("documentation_product").append(documentation_div);
+     })
+
+// sliding image part
+
+     function Sliders(o) {
+    "use strict";
+    var time = o.time || 500,
+        autoTime = o.autoTime || 5000,
+        selector = o.selector,
+        width_height = o.width_height || 100 / 70,
+        sliders = document.querySelectorAll(selector),
+        i;
+    function css(elm, prop, val) {
+        elm.style[prop] = val;
+        prop = prop[0].toUpperCase() + prop.slice(1);
+        elm.style["webkit" + prop] = elm.style["moz" + prop] =
+            elm.style["ms" + prop] = elm.style["o" + prop] = val;
+    }
+    function anonimFunc(slider) {
+        var buttonLeft = slider.children[2],
+            buttonRight = slider.children[1],
+            ul = slider.children[0],
+            li = ul.children,
+            activeIndex = 0,
+            isAnimate = false,
+            i,
+            s;
+        ul.style.paddingTop = (100 / width_height) + "%";
+        for (i = 0; i < li.length; i += 1) {
+            css(li[i], "animationDuration", time + "ms");
+        }
+        li[activeIndex].classList.add("active");
+        function left() {
+            if (isAnimate) { return; }
+            clearTimeout(s);
+            isAnimate = true;
+            var nextIndex = (activeIndex < li.length - 1) ? (activeIndex + 1) : (0);
+            li[nextIndex].classList.add("next");
+            li[activeIndex].classList.add("left");
+            li[nextIndex].classList.add("active");
+            setTimeout(function () {
+                li[activeIndex].classList.remove("active");
+                li[activeIndex].classList.remove("left");
+                li[nextIndex].classList.remove("next");
+                li[nextIndex].classList.add("active");
+                activeIndex = nextIndex;
+                isAnimate = false;
+                s = setTimeout(left, autoTime);
+            }, time);
+        }
+        function right() {
+            if (isAnimate) { return; }
+            clearTimeout(s);
+            isAnimate = true;
+            var nextIndex = (activeIndex > 0) ? (activeIndex - 1) : (li.length - 1);
+            li[nextIndex].classList.add("previous");
+            li[activeIndex].classList.add("right");
+            li[nextIndex].classList.add("active");
+            setTimeout(function () {
+                li[activeIndex].classList.remove("active");
+                li[activeIndex].classList.remove("right");
+                li[nextIndex].classList.remove("previous");
+                li[nextIndex].classList.add("active");
+                activeIndex = nextIndex;
+                isAnimate = false;
+                s = setTimeout(right, autoTime);
+            }, time);
+        }
+        buttonLeft.addEventListener("click", left);
+        buttonRight.addEventListener("click", right);
+        s = setTimeout(right, autoTime);
+    }
+    for (i = 0; i < sliders.length; i += 1) {
+        anonimFunc(sliders[i]);
+    }
+}
+
+
+
+var sliders = new Sliders({
+    selector: ".slider",
+    time: 500,
+    autoTime: 3000,
+    width_height: 350 / 250
+});
+
+   </script>
+
+ 
