@@ -91,19 +91,24 @@ var loginstatus = JSON.parse(localStorage.getItem("PhoneNumber")) || [];
 function logoutFunc(){
     localStorage.clear();
     alert("Log Out Succesfully ");
-    window.location.href="home.html";  
+    window.location.href="index.html";  
 }
 
 function ShopFunc(){
-
+    window.location.href="Product_Catogery.html";  
 }
 
 function carFunc(){
 
+
 }
 
 function OfferFunc(){
+    window.location.href="Offer_Page.html";  
+}
 
+function CatogeryFunc(){
+    window.location.href="Filter_page/Filter.html";  
 }
 
 //  Login Page 
@@ -111,7 +116,13 @@ function OfferFunc(){
 if(loginstatus.length>0){
     // document.getElementById("loginbtn").innerHTML=<i class="fa-solid fa-user"></i>;
     document.getElementById("loginbtn").innerText="Team Titan";
-    document.getElementById("LoginToViewOffer").innerText="Hurray ! Click Here To View Offers"
+    var getOffer = document.getElementById("LoginToViewOffer")
+    getOffer.innerText="Hurray ! Click Here To View Offers";
+    
+    getOffer.addEventListener("click", function(){
+        window.location.href="Offer_Page.html";  
+    })
+    
     var div = document.createElement("div");
         div.setAttribute("class" ,"dropdown");
         var span = document.createElement("span");
@@ -134,8 +145,9 @@ if(loginstatus.length>0){
 
         var p4 = document.createElement("p");
         p4.addEventListener("click", OfferFunc);
+       
         p4.innerText= "Offer";
-
+        p4.addEventListener("click",OfferFunc);
         div2.append(p2,p3,p4,p);
         div.append(span ,div2);
         document.getElementById("navbarLogin").append(div);
@@ -210,7 +222,7 @@ function otpconfirm(v, error, phnnumber) {
 
         alert("Login Succesfully");
         
-        window.location.href="home.html";  
+        window.location.href="index.html";  
         
 
  
@@ -271,6 +283,7 @@ var BelowSearchGridOBJ = [
 
 BelowSearchGridOBJ.map(function (ele) {
     var div = document.createElement("div");
+    
     var img = document.createElement("img");
     img.setAttribute("src", ele.img_url);
     var h6 = document.createElement("h6");
@@ -280,7 +293,9 @@ BelowSearchGridOBJ.map(function (ele) {
     p.setAttribute("id", "BelowSearchGridDiscounth5");
     p.innerText = ele.discount;
     div.append(img, h6, p);
+    div.addEventListener("click", ShopFunc);
     document.querySelector("#BelowSearchGrid").append(div);
+
 })
 
 //    Shop By Categories Grid
@@ -327,6 +342,7 @@ ShopByCategoriesGridOBJ.map(function (ele) {
     var p = document.createElement("p");
     p.innerText = ele.name;
     div.append(imgdiv, p);
+    div.addEventListener("click", CatogeryFunc );
     document.getElementById("ShopByCategoriesGrid").append(div);
 
 })
