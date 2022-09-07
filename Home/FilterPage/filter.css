@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+section {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  margin: auto;
+  gap: 15px;
+}
+.lhs {
+  width: 268px;
+  /* height: 1500px;
+  margin: auto;
+  position: relative;
+  top: 50px; */
+}
+.rhs {
+  width: 82%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mainHeading {
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #dfe3e6;
+}
+.filterSection {
+  height: 250px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #dfe3e6;
+}
+.labe {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  font-size: 15px;
+  font-family: normal;
+  color: grey;
+}
+.labe [type="radio"] {
+  height: 18px;
+  width: 18px;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  width: 88%;
+  margin: auto;
+  position: relative;
+
+  right: 70px;
+}
+#product {
+  width: 185px;
+  height: 295px;
+  margin: 15px 1%;
+  padding: 14px;
+  margin: auto;
+  margin-top: 25px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#product:hover {
+  border: 1px solid green;
+  transition: 0.25s ease;
+}
+#head {
+  display: flex;
+  justify-content: space-between;
+}
+img {
+  width: 100%;
+  height: 160px;
+}
+#minidiv {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -14px;
+  width: 126px;
+}
+select {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 10px;
+}
+#sort {
+  margin: 20px;
+}
+
+.select {
+  margin: 18px;
+}
+h1 {
+  font-size: 25px;
+  /* margin-left: -20px; */
+}
+#price {
+  margin-top: -4px;
+}
+h3 {
+  font-size: 16px;
+}
+#heading {
+  font-size: 14px;
+  color: rgb(59, 59, 59);
+}
+#serch {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid grey;
+}
+option {
+  outline: 1px dotted red;
+}
+#strikprice {
+  text-decoration: line-through;
+}
+.nav {
+  height: 80px;
+  border: 2px solid red;
+}
+.footer {
+  border: 5px solid teal;
+  height: 500px;
+  width: 100%;
+}
+/* .col {
+  height: 80px;
+  border: 2px solid red;
+} */
