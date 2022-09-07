@@ -241,7 +241,7 @@
     display: grid;
     grid-template-columns: repeat(2,1fr);
     width: 100%;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     margin-top: 100px;
     /* justify-content: space-around; */
 }
@@ -256,12 +256,12 @@
 
 
 #ProductSection{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     /* width: 60%; */
 }
 #ProductDetails{
     display: flex;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     /* width: 50%; */
     height: 250px;
    
@@ -274,7 +274,7 @@
 
 #prodimg > img{
     width: 35%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     margin: 20%;
 
 }
@@ -288,7 +288,7 @@
 
 
 #prodnamediv{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     margin-right: 20px;
     
 }
@@ -298,7 +298,7 @@
 }
 
 #DeleteSection{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     height: 200px;
 
 }
@@ -320,19 +320,19 @@
 
 #OrderSummarySection{
     display: flex;
-    border: 5px solid teal ;
+    /* border: 5px solid teal ; */
     width: 80%;
     align-self: flex-start;
     margin-left: 80px;
     
 }
 #cartValue{
-    border: 2px solid gold;
+    /* border: 2px solid gold; */
     margin-left: 100px;
 }
 
 #PriceBreakoutSection{
-    border: 2px solid magenta;
+    /* border: 2px solid magenta; */
 }
 
 
@@ -341,11 +341,14 @@
 
 #OrderBtn{
     background: #10847E;
+
     height: 45px;
     font-weight: 700;
-    width: 300px;
+    width: 500px;
     /* border: 2px solid red; */
     margin-top: 50px;
+    /* margin-left: 200px; */
+
     }
     #OrderBtn:hover{
         background: #427270;
@@ -355,16 +358,18 @@
 
 
 
-#priceBreakdown{
-    display: flex;
-   position: relative;
-   width: 50%;
 
-    flex-direction: row-reverse;
-
-}
 
 /* Price BreakDonw Section */
+
+#cartValue p{
+    margin-left: 50px;
+}
+
+
+#PriceBreakoutSection p{
+    margin-left: 50px;
+}
 
 #priceBreakdown{
     margin-top: 20px;
@@ -422,6 +427,10 @@ font-size: medium;
     margin-left: 5%;
     margin-top: 0%;
 
+}
+
+#hrlinePriceBreakdown2{
+    margin-bottom: 150px;
 }
 
 
@@ -509,4 +518,182 @@ font-size: medium;
     height: 3%;
     margin: 20px;
 
+}
+
+/*  */
+
+/* Deal of the day */
+
+#DealsofTheDayH4{
+    font-weight: bold;
+    margin-top: 4%;
+}
+
+#DealsofTheDay{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 20px;
+    /* border: 2px solid red; */
+}
+
+#DealsofTheDay+div{
+    /* border: 2px solid red; */
+   
+    border: 1px solid #E6EBF4;
+}
+
+#DealsofTheDay>div{
+    width: 178px;
+    height: 190px;
+    border-radius: 8px;
+    margin-top: 5%;
+    border: 1px solid #E6EBF4;
+    /* border: 2px solid red; */
+}
+#DealsofTheDay>div:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+    
+   
+}
+
+#DealsofTheDayImg{
+    /* border: 2px solid red; */
+    /* width: 100%; */
+    /* height: 190px; */
+
+}
+#DealsofTheDayImg img{
+  width: 80%;
+ /* width: 50%; */
+ height: 150px;
+ margin: auto;
+ padding-top: 20px;
+ padding-left: 25px;
+
+ /* margin-left:45px; */
+ /* margin-top: 10px; */
+ /* object-fit: cover; */
+ /* border: 2px solid red; */
+  
+    
+}
+
+#DealsofTheDayProdName{
+    padding-top: 5em;
+    font-size: 14px;
+    color: #30363C;
+    font-weight: lighter;
+    
+}
+
+#DealsofTheDayMRP{
+    color: #CAD1D6;
+    font-size: 13px;
+    margin-top: -10px;
+    font-weight: bold;
+}
+
+#DealsofTheDayMRP span{
+    text-decoration: line-through;
+   
+}
+
+#DealsofTheDayPrice{
+    font-weight: lighter;
+    margin-top: -0.5em;
+}
+#DealsofTheDayPrice span{
+   
+    font-size: 13px;
+    margin-left: 2px;
+    color: #F47D7F;
+    font-weight: bold;
+}
+
+/* In the SpotLight */
+#InTheSpotLightContainer{
+   margin-top: 12em;
+    border-top: none;
+    /* background: url(https://assets.pharmeasy.in/apothecary/images/spotlightBig.svg) no-repeat, linear-gradient(rgb(255, 248, 227) 0%, rgba(255, 255, 255, 0) 100%); */
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 450px;
+    
+}
+
+#InTheSpotLightH4{
+    font-weight: bold;
+    margin-top: 3%;
+    margin-left: 2%;
+    margin-bottom: 5%;
+}
+
+#InTheSpotLight{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 20px;
+    /* border: 2px solid red; */
+}
+
+#InTheSpotLight+div{
+    /* border: 2px solid red; */
+   
+    /* border: 1px solid #E6EBF4; */
+    
+}
+
+#InTheSpotLight>div{
+    width: 80%;
+    height: 180px;
+    border-radius: 8px;
+    /* margin-top: 5%; */
+    margin: 3%;
+    margin: auto;
+    /* border: 1px solid #E6EBF4; */
+    
+}
+#InTheSpotLight>div:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+    
+}
+
+#InTheSpotLightImg img{
+    width: 100%;
+ height: 175px;
+ 
+}
+
+#InTheSpotLightProName{
+    padding-top: 5em;
+    font-size: 14px;
+    color: #30363C;
+    font-weight: lighter;
+    margin-top: -50px;
+    
+}
+
+#InTheSpotLightMRP{
+    color: #CAD1D6;
+    font-size: 13px;
+    margin-top: -10px;
+    font-weight: bold;
+}
+
+#InTheSpotLightMRP span{
+    text-decoration: line-through;
+   
+}
+
+#InTheSpotLightPrice{
+    font-weight: lighter;
+    margin-top: -0.5em;
+}
+#InTheSpotLightPrice span{
+   
+    font-size: 13px;
+    margin-left: 2px;
+    color: #F47D7F;
+    font-weight: bold;
 }
