@@ -99,6 +99,7 @@ select {
 .select {
   margin: 18px;
 }
+
 h1 {
   font-size: 25px;
   /* margin-left: -20px; */
@@ -132,6 +133,9 @@ option {
   border: 5px solid teal;
   height: 500px;
   width: 100%;
+}
+@media screen and (min-width: 480px){
+  
 }
 /* .col {
   height: 80px;

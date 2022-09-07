@@ -1,15 +1,73 @@
 var Data = [
   {
     image_url:
-      "https://cdn01.pharmeasy.in/dam/products_otc/156765/savlon-antiseptic-disinfectant-liquid-1000-ml-2-1658475751.jpg",
-    name: "Dettol Disinfectant Sanitizer Spray Bottle",
-    offer: "15%",
-    strikedoffprice: "310",
-    price: "263.50",
+      "https://cdn01.pharmeasy.in/dam/products_otc/022290/becozym-c-forte-vitamin-b-complex-biotin-vitamin-c-strip-of-15-tablets-1-1654077406.jpg?dim=320x320&dpr=1&q=100",
+    name: "Becozym C Forte Strip Of 15 Tablets",
+    offer: "8%",
+    strikedoffprice: "25",
+    price: "23",
     category: "Covid Essentials",
     sub_category: "Disinfectants",
     brand: "coviself",
   },
+  {
+    image_url:
+      "https://cdn01.pharmeasy.in/dam/products_otc/Q83701/pharmeasy-all-in-one-vaporizer-1-1654233812.jpg?dim=320x320&dpr=1&q=100",
+    name: "Pharmeasy All-In -One Vaporizer",
+    offer: "55%",
+    strikedoffprice: "599",
+    price: "269.55",
+    category: "Covid Essentials",
+    sub_category: "Disinfectants",
+    brand: "coviself",
+  },
+
+  {
+    image_url:
+      "https://cdn01.pharmeasy.in/dam/products_otc/I00596/revital-h-women-multivitamin-with-calcium-zinc-ginseng-for-immunity-strong-bones-energy-30-tablets-1-1654168794.jpg?dim=320x320&dpr=1&q=100",
+    name: "Revital H Women Multivitamin.",
+    offer: "15%",
+    strikedoffprice: "360",
+    price: "306",
+    category: "Covid Essentials",
+    sub_category: "Disinfectants",
+    brand: "coviself",
+  },
+
+  {
+    image_url:
+      "https://cdn01.pharmeasy.in/dam/products_otc/266249/depura-60000-iu-vitamin-d3-oral-solution-helps-bones-healthy-aids-in-boosting-immunity-sugarfree-2-1654077895.jpg",
+    name: "Depura, 60000 Iu Vitamin D3 Oral Solution,",
+    offer: "20%",
+    strikedoffprice: "95",
+    price: "76",
+    category: "Covid Essentials",
+    sub_category: "Disinfectants",
+    brand: "coviself",
+  },
+  {
+    image_url:
+      "https://cdn01.pharmeasy.in/dam/products_otc/D92359/everherb-by-pharmeasy-amla-juice-rich-in-vitamin-c-natural-immunity-booster-1-litre-bottle-2-1654169607.jpg?dim=320x320&dpr=1&q=100",
+    name: "Everherb (By Pharmeasy) Amla Juice-Rich ",
+    offer: "50%",
+    strikedoffprice: "400",
+    price: "200",
+    category: "Covid Essentials",
+    sub_category: "Disinfectants",
+    brand: "coviself",
+  },
+  {
+    image_url:
+      "https://cdn01.pharmeasy.in/dam/products_otc/270552/revital-h-men-multivitamin-with-calcium-zinc-ginseng-for-immunity-strong-bones-energy-30-capsules-2-1654077741.jpg?dim=320x320&dpr=1&q=100",
+    name: "Revital H Men Multivitamin,",
+    offer: "15%",
+    strikedoffprice: "310",
+    price: "263",
+    category: "Covid Essentials",
+    sub_category: "Disinfectants",
+    brand: "coviself",
+  },
+
   {
     image_url:
       "https://cdn01.pharmeasy.in/dam/products_otc/R18677/lizol-jasmine-disinfectant-floor-cleanerliquid-bottle-of-500-ml-2-1653995388.jpg",
@@ -349,64 +407,6 @@ function covidBrand() {
   dispalaydata(covidTest);
 }
 
-// var arr = JSON.parse(localStorage.getItem("ShopByCatagory")) || [];
-// displayCat();
-// function displayCat() {
-//   arr.map(function (elem) {
-//     var div = document.createElement("div");
-//     div.setAttribute("id", "product");
-//     var image = document.createElement("img");
-//     image.setAttribute("src", elem.image_url);
-
-//     var h4 = document.createElement("h3");
-//     h4.innerText = elem.name;
-//     h4.setAttribute("id", "heading");
-
-//     var otherdiv = document.createElement("div");
-//     otherdiv.setAttribute("id", "minidiv");
-
-//     var offer = document.createElement("p");
-//     offer.innerText = elem.offer + " " + "Off";
-
-//     var strikedoffprice = document.createElement("p");
-//     strikedoffprice.innerText = elem.strikedoffprice;
-//     strikedoffprice.setAttribute("id", "strikprice");
-
-//     var h3 = document.createElement("h3");
-//     h3.innerText = "₹ " + elem.price;
-//     h3.setAttribute("id", "price");
-
-//     otherdiv.append(strikedoffprice, offer);
-//     div.append(image, h4, otherdiv, h3);
-//     document.querySelector(".rhs").append(div);
-//   });
-// }
-// document.getElementById("sortByPrice").addEventListener("change", sortBySalary);
-// function sortBySalary() {
-//   var disinfectCat = document.getElementById("sortByPrice").value;
-
-//   if (disinfectCat === "lth") {
-//     arr.sort(function (a, b) {
-//       if (a.price > b.price) {
-//         return 1;
-//       }
-//       if (a.price < b.price) {
-//         return -1;
-//       }
-//       return 0;
-//     });
-
-//     displayCat();
-//   }
-//   if (disinfectCat === "htl") {
-//     arr.sort(function (a, b) {
-//       return b.price - a.price;
-//     });
-//     displayCat();
-//   }
-//   console.log(salaryOrder);
-// }
-
 document.getElementById("sortByPrice").addEventListener("change", sortPrice);
 function sortPrice() {
   var Asort = document.getElementById("sortByPrice").value;
@@ -435,3 +435,13 @@ function sortPrice() {
   }
   dispalaydata(arrShow);
 }
+
+// document.getElementById("filter").addEventListener("click", myFunction);
+// function myFunction() {
+//   var array = document.getElementById("filter").value;
+//   var filtercat = arrShow.filter(function (elem) {
+//     return elem.category === array;
+//   });
+//   console.log(filtercat);
+//   dispalaydata(filtercat);
+// }
