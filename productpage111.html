@@ -4,12 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/35eac37102.js" crossorigin="anonymous"></script>
     <title>Document</title>
     <style>
         #navbar-top-mainbox-p{
-            display: flex;
-
+            /* display: flex; */
+            /* height: 50px; */
             /* justify-content: space-around; */
+            display: flex;
+           justify-content: center;
+            align-items: center;
+             width: 100%;
+            height: 80px;
+            box-shadow: 0 3px 4px rgb(0 0 0 / 6%), 0 3px 3px rgb(0 0 0 / 4%), 0 1px 8px rgb(0 0 0 / 8%);
+            margin-top: 0%;
+        }
+        #navbar-top-parts{
+            width: 90%;
+            display: flex; 
+            flex-wrap: nowrap;
+             justify-content: space-between;
+             align-items: center;
+            /* padding: 12px 60px; */
+             /* grid-gap: 24px;  */
+             /* width: 100%; */
+             margin: auto;
+        }
+        #navbar-top-mainbox-p1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            outline: none;
+        }
+        #delivery_navbar{
+            width: 176px;
+           white-space: nowrap;
+           padding-bottom: 10px;
+            
+        }
+        .delivery_navbar_p1{
+            display: flex;
+            align-items: center;
+        }
+        .delivery_navbar_p2{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .delivery_navbar_p2_1{
+            max-width: 126px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 600;
+    color: #30363c;
+    line-height: 24px;
+        }
+        .vertical_devider_navbar{
+            margin: 0 24px;
+             width: 1px;
+             height: 32px;
+             background-color: #8897a2;
+        }
+        #navbar-top-main-p3{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            outline: none;
+            width: 25%;
         }
         #navbar-top-mainbox-p>div{
             margin: auto;
@@ -47,6 +112,7 @@
             background-color: rgb(238, 244, 255);
             align-items: center;
             padding: 1%;
+            /* margin-top: 2%; */
         }
         #navbar-bottom-box-p>div{
             margin: auto;
@@ -91,6 +157,10 @@
             margin: auto;
             margin-right: 15%;
             justify-content: space-between;
+        }
+        .offertag_product{
+            color: #16876e;
+            margin-left: 5%;
         }
         font-face {
             font: Montserrat;
@@ -230,6 +300,9 @@
     font-family: sans-serif;
   }
   /* Footer Linkes */
+  #footerlink_mainbox{
+    background-color: #EEF4FF;
+  }
 
 #FooterLinks{
     background-color: #EEF4FF;
@@ -254,8 +327,10 @@
    
     padding: 20px;
 }
-
-#FooterPayment{
+/* .footerlastbox{
+    background-color: #EEF4FF; 
+}*/
+#FooterPayment{ 
     background-color: #EEF4FF;
     width: 80%;
     margin: auto;
@@ -279,18 +354,30 @@
 
    
     </style>
-    <script src="https://kit.fontawesome.com/35eac37102.js" crossorigin="anonymous"></script>
-
+  
+ 
 </head>
 <body>
+
     <div id="navbar-top-mainbox-p">
+        <div id="navbar-top-parts">
+       <div id="navbar-top-mainbox-p1">
     <div>
         <img src="https://assets.pharmeasy.in/apothecary/images/logo_big.svg?dim=360x0" alt="main-logo-p">
     </div>
-    <div>
-        <p>Express Delivery To</p>
-        <button>Select Pincode</button>
+    <div class="vertical_devider_navbar">
+
     </div>
+    <div id="delivery_navbar">
+    <div class="delivery_navbar_p1">
+        <p>Express Delivery To</p>
+        </div>
+        <div class="delivery_navbar_p2">
+        <span class="delivery_navbar_p2_1">Select Pincode</span>
+        </div>
+        
+    </div>
+        </div>
     <!-- <div id="navbar-top-search-placeholder-div">
         <input id="navbar-top-search-placeholder-product" type="text" placeholder="Search for Medicine and Healthcare item" >
         <button id="navbar-search-button-product">Search</button>
@@ -300,18 +387,19 @@
         <input type="text" placeholder=" Search For Medicine">
         <button id="BelownavbarSearchButton"> Search</button>
     </div>
+    <div id="navbar-top-main-p3">
     <div id="navbarLogin">
         <p id="loginbtn"> <i class="fa-solid fa-user"></i> Hello, Log In</p>
     </div>
     <div>
-        <!-- <i class="fa-light fa-tire-rugged"></i> -->
-        <i class="fa-sharp fa-solid fa-tire-rugged"></i>
+        <i class="fa-sharp fa-solid fa-badge-percent"></i>
         <button>Offers</button>
     </div>
     <div>
-         <!-- <i class="fa-regular fa-cart-shopping"></i> -->
-         <i class="fa-sharp fa-solid fa-cart-shopping-fast"></i>
+         <i class="fa-sharp fa-solid fa-cart-shopping"></i>
         <button>Cart</button>
+    </div>
+    </div>
     </div>
     </div>
     <div id="navbar-bottom-box-p">
@@ -359,7 +447,7 @@
         <div id="documentation_product"></div>
     </div>
     <!-- Footer Linkes -->
-    <div>
+    <div id="footerlink_mainbox">
     <div id="FooterLinks">
         <div id="FooterDiv1">
             <p>Company</p>
@@ -429,8 +517,8 @@
 
         
 
-    </div>
-
+    <!-- </div> -->
+<!-- <div class="footerlastbox"> -->
     <div id="FooterPayment">
         <p id="FooterPaymentPatnerP">Our Payment Partners</p>
         <div id="paymentimg">
@@ -447,6 +535,7 @@
          <p>© 2022 PharmEasy. All Rights Reserved</p>
         </div>
      </div>
+</div>
 </body>
 </html>
    <script>
@@ -545,6 +634,7 @@
         var child_name=document.createElement("p");
         child_name.innerText=ele.care_listname;
         var offertag=document.createElement("p");
+        offertag.setAttribute("class","offertag_product");
         offertag.innerText=ele.offer_ptag;
         
         childdiv.append(child_name,offertag);
