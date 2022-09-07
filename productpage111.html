@@ -8,10 +8,19 @@
     <script src="https://kit.fontawesome.com/35eac37102.js" crossorigin="anonymous"></script>
     <title>Document</title>
     <style>
+        #navbar-mainbox{
+            position: fixed;
+            top: 0;
+            width: 100%;
+             z-index: 200;
+           /* -webkit-user-select: none; */
+            /* -moz-user-select: none; */
+              /* user-select: none; */
+             background-color: #fff;
+             overflow: hidden;
+             margin-bottom: 50px;
+        }
         #navbar-top-mainbox-p{
-            /* display: flex; */
-            /* height: 50px; */
-            /* justify-content: space-around; */
             display: flex;
            justify-content: center;
             align-items: center;
@@ -19,6 +28,7 @@
             height: 80px;
             box-shadow: 0 3px 4px rgb(0 0 0 / 6%), 0 3px 3px rgb(0 0 0 / 4%), 0 1px 8px rgb(0 0 0 / 8%);
             margin-top: 0%;
+            position: initial;
         }
         #navbar-top-parts{
             width: 90%;
@@ -36,6 +46,7 @@
             justify-content: center;
             align-items: center;
             outline: none;
+            cursor: pointer;
         }
         #delivery_navbar{
             width: 176px;
@@ -76,6 +87,12 @@
             outline: none;
             width: 25%;
         }
+        #navbar-top-main-p3 div button:hover{
+            text-decoration: underline dashed #30363c;
+        }
+        #loginbtn:hover{
+            text-decoration: underline dashed #30363c;
+        }
         #navbar-top-mainbox-p>div{
             margin: auto;
         }
@@ -83,12 +100,25 @@
             cursor: pointer;
 
         }
+        #belowNavbarinput{
+            border: 1px solid silver;
+            width: 30%;
+            border-radius: 30px;
+            justify-content: space-around;
+            padding: 0.5%;
+        }
+        
         #belowNavbarinput :placeholder-shown{
             margin: 5px;
             border-radius: 15px;
+            border: 0px;
         }
+        #belowNavbarinput :placeholder-shown:hover{
+            border: 0em;
+        }
+
         #BelownavbarSearchButton{
-    /* display: flex; */
+    
     width: 100px;
     flex-shrink: 0;
     box-sizing: border-box;
@@ -98,39 +128,32 @@
     transition: transform 0.2s ease 0s, background-color 0.1s ease-in 0s;
     color: white; 
         }
-        /* #navbar-search-button-product{
-            color: white;
-            background-color: cadetblue;
-            border-radius: 10px;
-        }
-        #navbar-top-search-placeholder-product{
-            border-radius: 10px;
-        } */
+        
         
         #navbar-bottom-box-p{
             display: flex; 
             background-color: rgb(238, 244, 255);
             align-items: center;
             padding: 1%;
-            /* margin-top: 2%; */
         }
         #navbar-bottom-box-p>div{
             margin: auto;
+        }
+       
+        div>button{
+           border: 0; 
+           cursor: pointer;
+           background-color: transparent;
+        }
+        /* navbar product part end here */
+        #hometagbox{
+            margin-top: 120px;
         }
         .hometag{
             width: 80%;
             display: flex;
             margin: auto;
         }
-        div>button{
-           border: 0; 
-           cursor: pointer;
-           background-color: transparent;
-        }
-        /* div>button:hover{
-            border-bottom: dashed black;
-        } */
-        /* navbar product part end here */
         #product-items-box{
             display: grid;
             grid-template-columns: repeat(3,1fr);
@@ -143,13 +166,10 @@
             display: flex;
             justify-content: space-evenly;
             cursor: pointer;
-            /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
             border-radius: 10px;
         
         }
         #product-items-box>div:hover{
-         /* box-shadow: rgba(0,0,0,0.24)0px 3px 8px;
-         border: 3px solid #10847e; */
          box-shadow: 0 0 5px 2px #16876e;
         }
         #productpage_name_div{
@@ -181,7 +201,7 @@
         color:  #30363c;
      }
      #button_box_navbar>button:hover{
-        border-bottom: dashed black;
+        text-decoration: underline dashed #30363c;
      }
      #documentation_product{
         width: 80%;
@@ -209,9 +229,9 @@
   .slider {
     overflow: hidden;
     position: relative;
-    /* border-radius: 20px; */
     
   }
+
   .slider > ul {
     margin: 0;
     padding: 0;
@@ -327,9 +347,6 @@
    
     padding: 20px;
 }
-/* .footerlastbox{
-    background-color: #EEF4FF; 
-}*/
 #FooterPayment{ 
     background-color: #EEF4FF;
     width: 80%;
@@ -358,7 +375,7 @@
  
 </head>
 <body>
-
+<div id="navbar-mainbox">
     <div id="navbar-top-mainbox-p">
         <div id="navbar-top-parts">
        <div id="navbar-top-mainbox-p1">
@@ -378,10 +395,6 @@
         
     </div>
         </div>
-    <!-- <div id="navbar-top-search-placeholder-div">
-        <input id="navbar-top-search-placeholder-product" type="text" placeholder="Search for Medicine and Healthcare item" >
-        <button id="navbar-search-button-product">Search</button>
-    </div> -->
     <div id="belowNavbarinput">
         <i id="belownavbarSearchIcon" class="fa-sharp fa-solid fa-magnifying-glass"></i>
         <input type="text" placeholder=" Search For Medicine">
@@ -412,7 +425,8 @@
       <button>Health Blogs</button>
         </div>
     </div>
-    <div>
+</div>
+    <div id="hometagbox">
         <div class="hometag">
             <button>Home</button>
             <p> >  Healthcare</p>
