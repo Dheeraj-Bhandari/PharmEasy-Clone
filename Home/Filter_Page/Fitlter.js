@@ -751,6 +751,21 @@ var arrShow = JSON.parse(localStorage.getItem("ShopByCatagory")) || [];
 document.getElementById("all").addEventListener("click", showAll);
 function showAll() {
   dispalaydata(Data);
+  document.getElementById("sortByPrice").addEventListener("change", sortPrice);
+  function sortPrice() {
+    var Asort = document.getElementById("sortByPrice").value;
+
+    if (Asort === "lth") {
+      dispalaydata(arrShow);
+    }
+    dispalaydata(arrShow);
+    if (Asort === "htl") {
+      arrShow.sort(function (a, b) {
+        return parseInt(b.price) - parseInt(a.price);
+      });
+    }
+    dispalaydata(arrShow);
+  }
 }
 
 // filter by Disinfectants
@@ -763,6 +778,24 @@ function filterDisinfectants() {
     return elem.sub_category === "Disinfectants";
   });
   dispalaydata(Disinfectants);
+  document.getElementById("sortByPrice").addEventListener("change", sortPrice);
+  function sortPrice() {
+    var Asort = document.getElementById("sortByPrice").value;
+    if (Asort === "lth") {
+      Disinfectants.sort(function (a, b) {
+        return parseInt(a.price) - parseInt(b.price);
+      });
+    }
+
+    if (Asort === "htl") {
+      Disinfectants.sort(function (a, b) {
+        return parseInt(b.price) - parseInt(a.price);
+      });
+    }
+    dispalaydata(Disinfectants);
+  }
+
+  dispalaydata(Disinfectants);
 }
 // filter by covidKit
 document.getElementById("covidKit").addEventListener("click", filterCovid);
@@ -770,6 +803,24 @@ function filterCovid() {
   var covid = arrShow.filter(function (elem) {
     return elem.sub_category === "Covid test kit";
   });
+  dispalaydata(covid);
+  document.getElementById("sortByPrice").addEventListener("change", sortPrice);
+  function sortPrice() {
+    var Asort = document.getElementById("sortByPrice").value;
+    if (Asort === "lth") {
+      covid.sort(function (a, b) {
+        return parseInt(a.price) - parseInt(b.price);
+      });
+    }
+
+    if (Asort === "htl") {
+      covid.sort(function (a, b) {
+        return parseInt(b.price) - parseInt(a.price);
+      });
+    }
+    dispalaydata(covid);
+  }
+
   dispalaydata(covid);
 }
 // filter by hygiene
@@ -779,6 +830,24 @@ function hygieneEssential() {
     return elem.sub_category === "Home Hygiene Essentials";
   });
   dispalaydata(hygiene);
+  document.getElementById("sortByPrice").addEventListener("change", sortPrice);
+  function sortPrice() {
+    var Asort = document.getElementById("sortByPrice").value;
+    if (Asort === "lth") {
+      hygiene.sort(function (a, b) {
+        return parseInt(a.price) - parseInt(b.price);
+      });
+    }
+
+    if (Asort === "htl") {
+      hygiene.sort(function (a, b) {
+        return parseInt(b.price) - parseInt(a.price);
+      });
+    }
+    dispalaydata(hygiene);
+  }
+
+  dispalaydata(hygiene);
 }
 // filter by handSenitizer
 document.getElementById("handSenitizer").addEventListener("click", senitizer);
@@ -787,6 +856,24 @@ function senitizer() {
     return elem.sub_category === "senetizer";
   });
   dispalaydata(senitizer);
+  document.getElementById("sortByPrice").addEventListener("change", sortPrice);
+  function sortPrice() {
+    var Asort = document.getElementById("sortByPrice").value;
+    if (Asort === "lth") {
+      senitizer.sort(function (a, b) {
+        return parseInt(a.price) - parseInt(b.price);
+      });
+    }
+
+    if (Asort === "htl") {
+      senitizer.sort(function (a, b) {
+        return parseInt(b.price) - parseInt(a.price);
+      });
+    }
+    dispalaydata(senitizer);
+  }
+
+  dispalaydata(senitizer);
 }
 // filter by Mask
 document.getElementById("mask").addEventListener("click", myMask);
@@ -794,6 +881,24 @@ function myMask() {
   var mask = arrShow.filter(function (elem) {
     return elem.sub_category === "Mask";
   });
+  dispalaydata(mask);
+  document.getElementById("sortByPrice").addEventListener("change", sortPrice);
+  function sortPrice() {
+    var Asort = document.getElementById("sortByPrice").value;
+    if (Asort === "lth") {
+      mask.sort(function (a, b) {
+        return parseInt(a.price) - parseInt(b.price);
+      });
+    }
+
+    if (Asort === "htl") {
+      mask.sort(function (a, b) {
+        return parseInt(b.price) - parseInt(a.price);
+      });
+    }
+    dispalaydata(mask);
+  }
+
   dispalaydata(mask);
 }
 
@@ -804,6 +909,24 @@ function coviselfFilter() {
     return elem.brand === "coviself";
   });
   dispalaydata(covidself);
+  document.getElementById("sortByPrice").addEventListener("change", sortPrice);
+  function sortPrice() {
+    var Asort = document.getElementById("sortByPrice").value;
+    if (Asort === "lth") {
+      covidself.sort(function (a, b) {
+        return parseInt(a.price) - parseInt(b.price);
+      });
+    }
+
+    if (Asort === "htl") {
+      covidself.sort(function (a, b) {
+        return parseInt(b.price) - parseInt(a.price);
+      });
+    }
+    dispalaydata(covidself);
+  }
+
+  dispalaydata(covidself);
 }
 // filter by merilBrand
 document.getElementById("meril").addEventListener("click", merilBrand);
@@ -811,6 +934,24 @@ function merilBrand() {
   var merile = arrShow.filter(function (elem) {
     return elem.brand === "Meril";
   });
+  dispalaydata(merile);
+  document.getElementById("sortByPrice").addEventListener("change", sortPrice);
+  function sortPrice() {
+    var Asort = document.getElementById("sortByPrice").value;
+    if (Asort === "lth") {
+      merile.sort(function (a, b) {
+        return parseInt(a.price) - parseInt(b.price);
+      });
+    }
+
+    if (Asort === "htl") {
+      merile.sort(function (a, b) {
+        return parseInt(b.price) - parseInt(a.price);
+      });
+    }
+    dispalaydata(merile);
+  }
+
   dispalaydata(merile);
 }
 // filter by panbioBrand
@@ -821,6 +962,24 @@ function panbioBrand() {
     return elem.brand === "Panbio";
   });
   dispalaydata(panb);
+  document.getElementById("sortByPrice").addEventListener("change", sortPrice);
+  function sortPrice() {
+    var Asort = document.getElementById("sortByPrice").value;
+    if (Asort === "lth") {
+      panb.sort(function (a, b) {
+        return parseInt(a.price) - parseInt(b.price);
+      });
+    }
+
+    if (Asort === "htl") {
+      panb.sort(function (a, b) {
+        return parseInt(b.price) - parseInt(a.price);
+      });
+    }
+    dispalaydata(panb);
+  }
+
+  dispalaydata(panb);
 }
 // filter by covidBrand
 document.getElementById("covid").addEventListener("click", covidBrand);
@@ -829,90 +988,39 @@ function covidBrand() {
     return elem.brand === "Covid test";
   });
   dispalaydata(covidTest);
+  document.getElementById("sortByPrice").addEventListener("change", sortPrice);
+  function sortPrice() {
+    var Asort = document.getElementById("sortByPrice").value;
+    if (Asort === "lth") {
+      covidTest.sort(function (a, b) {
+        return parseInt(a.price) - parseInt(b.price);
+      });
+    }
+
+    if (Asort === "htl") {
+      covidTest.sort(function (a, b) {
+        return parseInt(b.price) - parseInt(a.price);
+      });
+    }
+    dispalaydata(covidTest);
+  }
+
+  dispalaydata(covidTest);
 }
-
-// var arr = JSON.parse(localStorage.getItem("ShopByCatagory")) || [];
-// displayCat();
-// function displayCat() {
-//   arr.map(function (elem) {
-//     var div = document.createElement("div");
-//     div.setAttribute("id", "product");
-//     var image = document.createElement("img");
-//     image.setAttribute("src", elem.image_url);
-
-//     var h4 = document.createElement("h3");
-//     h4.innerText = elem.name;
-//     h4.setAttribute("id", "heading");
-
-//     var otherdiv = document.createElement("div");
-//     otherdiv.setAttribute("id", "minidiv");
-
-//     var offer = document.createElement("p");
-//     offer.innerText = elem.offer + " " + "Off";
-
-//     var strikedoffprice = document.createElement("p");
-//     strikedoffprice.innerText = elem.strikedoffprice;
-//     strikedoffprice.setAttribute("id", "strikprice");
-
-//     var h3 = document.createElement("h3");
-//     h3.innerText = "₹ " + elem.price;
-//     h3.setAttribute("id", "price");
-
-//     otherdiv.append(strikedoffprice, offer);
-//     div.append(image, h4, otherdiv, h3);
-//     document.querySelector(".rhs").append(div);
-//   });
-// }
-// document.getElementById("sortByPrice").addEventListener("change", sortBySalary);
-// function sortBySalary() {
-//   var disinfectCat = document.getElementById("sortByPrice").value;
-
-//   if (disinfectCat === "lth") {
-//     arr.sort(function (a, b) {
-//       if (a.price > b.price) {
-//         return 1;
-//       }
-//       if (a.price < b.price) {
-//         return -1;
-//       }
-//       return 0;
-//     });
-
-//     displayCat();
-//   }
-//   if (disinfectCat === "htl") {
-//     arr.sort(function (a, b) {
-//       return b.price - a.price;
-//     });
-//     displayCat();
-//   }
-//   console.log(salaryOrder);
-// }
+//  Sort By Prices low to high and high to low
 
 document.getElementById("sortByPrice").addEventListener("change", sortPrice);
 function sortPrice() {
-  var Asort = document.getElementById("sortByPrice").value;
-  if (Asort === "lth") {
+  var priceSort = document.getElementById("sortByPrice").value;
+  if (priceSort === "lth") {
     arrShow.sort(function (a, b) {
-      if (a.price > b.price) {
-        return -1;
-      }
-      if (a.price < b.price) {
-        return 1;
-      }
-      return 0;
+      return parseInt(a.price) - parseInt(b.price);
     });
   }
   // dispalaydata(arrShow);
-  if (Asort === "htl") {
+  if (priceSort === "htl") {
     arrShow.sort(function (a, b) {
-      if (a.price > b.price) {
-        return 1;
-      }
-      if (a.price < b.price) {
-        return -1;
-      }
-      return 0;
+      return parseInt(b.price) - parseInt(a.price);
     });
   }
   dispalaydata(arrShow);

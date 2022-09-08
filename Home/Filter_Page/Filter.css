@@ -229,9 +229,9 @@ section {
   border-bottom: 1px solid #dfe3e6;
 }
 .filterSection {
-  height: 250px;
-  padding-bottom: 10px;
-  margin-bottom: 30px;
+  height: 275px;
+  /* padding-bottom: 10px; */
+  margin-bottom: 20px;
   border-bottom: 1px solid #dfe3e6;
 }
 .labe {
@@ -412,4 +412,45 @@ option {
   width: 5%;
   height: 3%;
   margin: 20px;
+}
+/* For 1024 Resolution */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  #navbar {
+    width: 97%;
+  }
+
+  #navbarEnd {
+    margin-left: 135px;
+  }
+  #belownavbardata {
+    width: 100%;
+  }
+  .top {
+    right: 100px;
+  }
+  .lhs {
+    width: 174px;
+  }
+  .rhs {
+    width: 59%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 20px; */
+  }
+  /* select {
+    padding: 6px;
+
+    margin-right: 59px;
+  } */
+  section {
+    width: 89%;
+
+    gap: 47px;
+  }
+  h2 {
+    display: none;
+  }
+  #product {
+    width: 234px;
+  }
 }
