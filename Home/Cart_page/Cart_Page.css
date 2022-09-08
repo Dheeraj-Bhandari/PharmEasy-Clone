@@ -16,7 +16,7 @@
 #navbar{
   
     display: flex;
-    width: 80%;
+    width: 50%;
     height: 7%;
     /* border: 2px solid  red; */
     justify-content: flex-start;
@@ -256,12 +256,12 @@
 
 
 #ProductSection{
-    /* border: 2px solid red; */
-    /* width: 60%; */
+    border: 2px solid red;
+   width: 100%; 
 }
 #ProductDetails{
     display: flex;
-    /* border: 2px solid red; */
+    border: 2px solid red;
     /* width: 50%; */
     height: 250px;
    
@@ -274,10 +274,16 @@
 
 #prodimg > img{
     width: 35%;
-    /* border: 2px solid red; */
+    border: 2px solid red;
     margin: 20%;
 
 }
+
+#IteminCartDiv{
+    border: 2px solid red;
+}
+
+
 
 #mrp p{
     text-decoration: line-through;
@@ -697,3 +703,85 @@ font-size: medium;
     color: #F47D7F;
     font-weight: bold;
 }
+
+/* Add address part */
+
+/* login Page */
+
+/* login Page */
+
+#AdressPage {
+    height: 800px;
+    width: 450px;
+    background-color: white;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    display: none;
+  
+  }
+  #logintop {
+    background-color: #10847e;
+    /* border: 2px solid red; */
+    background-image: url("https://assets.pharmeasy.in/web-assets/dist/1fe1322a.svg?dim=256x0");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-size: contain;
+    padding: 20px;
+    display: flex;
+  }
+  #logintop button {
+    position: absolute;
+    left: -40px;
+    background-color: #10847e;
+    width: 50px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    padding: 7px;
+    border: none;
+    opacity: 1 !important;
+  }
+  
+  #logintop > img {
+    width: 50%;
+  }
+  #loginbottom {
+    padding: 10px;
+    /* border: 1px solid red; */
+    width: 80%;
+    margin: auto;
+  }
+  #loginbottom label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  #loginbottom input {
+    display: block;
+    margin-bottom: 10px;
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 17px;
+  }
+  #loginbottom p {
+    font-size: 15px;
+    text-align: justify;
+  }
+  #Checkout {
+    background-color: #10847e;
+    color: white;
+    font-weight: 500;
+  }
+
+
+  /* After Js  */
+
+  /* Qty Div Button */
+
+  #qtysection button{
+    margin: 5px;
+  }
+  #qtysection button:hover{
+    /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
+  }

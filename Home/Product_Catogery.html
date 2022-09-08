@@ -46,7 +46,6 @@
         /* width: 100%;
             margin: auto;
         }
-
         #navbar-top-mainbox-p1 {
             display: flex;
             justify-content: center;
@@ -54,25 +53,20 @@
             outline: none;
             cursor: pointer;
         }
-
         #delivery_navbar {
             width: 176px;
             white-space: nowrap;
             padding-bottom: 10px;
-
         }
-
         .delivery_navbar_p1 {
             display: flex;
             align-items: center;
         }
-
         .delivery_navbar_p2 {
             display: flex;
             align-items: center;
             cursor: pointer;
         }
-
         .delivery_navbar_p2_1 {
             max-width: 126px;
             text-overflow: ellipsis;
@@ -84,14 +78,12 @@
             color: #30363c;
             line-height: 24px;
         }
-
         .vertical_devider_navbar {
             margin: 0 24px;
             width: 1px;
             height: 32px;
             background-color: #8897a2;
         }
-
         #navbar-top-main-p3 {
             display: flex;
             justify-content: space-between;
@@ -99,24 +91,18 @@
             outline: none;
             width: 25%;
         }
-
         #navbar-top-main-p3 div button:hover {
             text-decoration: underline dashed #30363c;
         }
-
         #loginbtn:hover {
             text-decoration: underline dashed #30363c;
         }
-
         #navbar-top-mainbox-p>div {
             margin: auto;
         }
-
         #navbarLogin {
             cursor: pointer;
-
         }
-
         #belowNavbarinput {
             border: 1px solid silver;
             width: 30%;
@@ -124,19 +110,15 @@
             justify-content: space-around;
             padding: 0.5%;
         }
-
         #belowNavbarinput :placeholder-shown {
             margin: 5px;
             border-radius: 15px;
             border: 0px;
         }
-
         #belowNavbarinput :placeholder-shown:hover {
             border: 0em;
         }
-
         #BelownavbarSearchButton {
-
             width: 100px;
             flex-shrink: 0;
             box-sizing: border-box;
@@ -146,19 +128,15 @@
             transition: transform 0.2s ease 0s, background-color 0.1s ease-in 0s;
             color: white;
         }
-
-
         /* #navbar-bottom-box-p {
             display: flex;
             background-color: rgb(238, 244, 255);
             align-items: center;
             padding: 1%;
         }
-
         #navbar-bottom-box-p>div {
             margin: auto;
         }
-
         div>button {
             border: 0;
             cursor: pointer;
@@ -185,6 +163,7 @@
             position: fixed;
             /* overflow: auto; */
             /* overflow: initial; */
+            z-index: 200;
 
         }
 
@@ -370,9 +349,9 @@
 
 
         /* navbar product part end here */
-        #hometagbox {
-            /* margin-top: 120px; */
-        }
+        /* #hometagbox {
+            /* margin-top: 120px; 
+        } */
 
         .hometag {
             width: 100%;
@@ -417,7 +396,7 @@
 
 
         #health_image {
-            width: 20%;
+            width: 40%;
             padding: 10%;
             margin: auto;
 
@@ -532,10 +511,10 @@
         .slider {
            /* border: 2px solid red; */
             max-width: 80%;
-            max-height: 350px;
+            max-height: 300px;
             margin: 0 auto;
             background-color: #fff;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+            /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); */
             margin-top: 100px;
            position: relative;
         }
@@ -578,8 +557,8 @@
         .slider>ul>li>img {
             width: 100%;
             height: 100%;
-            position: absolute;
-            object-fit: cover;
+            /* position: absolute; */
+            /* object-fit: cover; */
             left: 0;
             top: 0;
         }
@@ -598,6 +577,7 @@
             position: relative;
             padding: 0 15%;
             color: #fff;
+            /* color: transparent; */
             font-family: sans-serif;
         }
 
@@ -674,6 +654,28 @@
             margin: 20px;
 
         }
+        @media screen and (max-width:800px){
+            #product-items-box{
+                grid-template-columns: repeat(1,1fr);
+            }
+            .slider {
+            max-height: 200px;
+            }
+            #paymentimg{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            #FooterLinks{
+                display: flex;
+                flex-wrap: wrap;  
+            }
+
+        }
+        /* @media screen and (max-width:500px){
+            #product-items-box{
+                grid-template-columns: repeat(1,1fr);
+            } 
+        } */
     </style>
 
 
@@ -682,7 +684,6 @@
 <body>
     <div class="container">
         <!-- <div id="navbar-mainbox">
-
             <div id="navbar-top-mainbox-p">
                 <div id="navbar-top-parts">
                <div id="navbar-top-mainbox-p1">
@@ -839,6 +840,12 @@
             <div id="documentation_product"></div>
         </div>
         <!-- Footer Linkes -->
+        <!-- <div>
+            <div id="footer_first_part">
+                <img src="" alt="footer_firstpart">
+            </div>
+
+        </div> -->
         <div>
             <div id="footer-mob-imagebox">
                 <div id="footer-mob-child">

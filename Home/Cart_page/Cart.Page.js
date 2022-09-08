@@ -3,74 +3,74 @@
 var loginstatus = JSON.parse(localStorage.getItem("PhoneNumber")) || [];
 
 //log out funnction
-function logoutFunc(){
+function logoutFunc() {
     localStorage.clear();
     alert("Log Out Succesfully ");
-    window.location.href="Cart_Page.html";  
+    window.location.href = "Cart_Page.html";
 }
 
-function ShopFunc(){
-
+function ShopFunc() {
+    window.location.href="/Product_Catogery.html"
 }
 
-function carFunc(){
-
+function carFunc() {
+window.location.href="/Cart_page/Cart_Page.html"
 }
 
-function OfferFunc(){
-
+function OfferFunc() {
+    window.location.href="/Offer_Page.html";
 }
 
 //  Login Page 
 
-if(loginstatus.length>0){
+if (loginstatus.length > 0) {
     // document.getElementById("loginbtn").innerHTML=<i class="fa-solid fa-user"></i>;
-    document.getElementById("loginbtn").innerText="Team Titan";
+    document.getElementById("loginbtn").innerText = "Team Titan";
     // document.getElementById("LoginToViewOffer").innerText="Hurray ! Click Here To View Offers"
     var div = document.createElement("div");
-        div.setAttribute("class" ,"dropdown");
-        var span = document.createElement("span");
-        span.innerText="See More";
-       
-        var div2= document.createElement("div");
-        div2.setAttribute('class', "dropdown-content");
-        var p = document.createElement("p");
-        p.setAttribute("id","logoutNavBar");
-        p.addEventListener("click", logoutFunc);
-        p.innerText= "Log Out";
+    div.setAttribute("class", "dropdown");
+    var span = document.createElement("span");
+    span.innerText = "See More";
 
-        var p2 = document.createElement("p");
-        p2.addEventListener("click", ShopFunc);
-        p2.innerText= "Shop";
+    var div2 = document.createElement("div");
+    div2.setAttribute('class', "dropdown-content");
+    var p = document.createElement("p");
+    p.setAttribute("id", "logoutNavBar");
+    p.addEventListener("click", logoutFunc);
+    p.innerText = "Log Out";
 
-        var p3 = document.createElement("p");
-        p3.addEventListener("click", carFunc);
-        p3.innerText= "Cart";
+    var p2 = document.createElement("p");
+    p2.addEventListener("click", ShopFunc);
+    p2.innerText = "Shop";
 
-        var p4 = document.createElement("p");
-        p4.addEventListener("click", OfferFunc);
-        p4.innerText= "Offer";
+    var p3 = document.createElement("p");
+    p3.addEventListener("click", carFunc);
+    p3.innerText = "Cart";
 
-        div2.append(p2,p3,p4,p);
-        div.append(span ,div2);
-        document.getElementById("navbarLogin").append(div);
+    var p4 = document.createElement("p");
+    p4.addEventListener("click", OfferFunc);
+    p4.innerText = "Offer";
 
-  }
+    div2.append(p2, p3, p4, p);
+    div.append(span, div2);
+    document.getElementById("navbarLogin").append(div);
+
+}
 
 document.querySelector("#loginbtn").addEventListener("click", validateLogin)
 
 
-function validateLogin(){
-        console.log(loginstatus.length)
-      if(loginstatus.length==0){
+function validateLogin() {
+    console.log(loginstatus.length)
+    if (loginstatus.length == 0) {
         showlogin();
-      }
-      
+    }
+
 }
 
 function showlogin() {
     document.querySelector("#loginpage").style.display = "block";
-  
+
     document.querySelector("#loginpage").style.opacity = "1";
 
 }
@@ -104,7 +104,7 @@ document.querySelector("#loginform").addEventListener("submit", function () {
 
         paralast.innerText = "By clicking continue, you agree with our Privacy Policy"
         btn.addEventListener('click', function () {
-            otpconfirm(otpinput.value, error,phnnumber)
+            otpconfirm(otpinput.value, error, phnnumber)
         })
 
         document.querySelector("#loginbottom").append(para, otpinput, error, btn, paralast);
@@ -117,22 +117,22 @@ document.querySelector("#loginform").addEventListener("submit", function () {
 
 })
 function otpconfirm(v, error, phnnumber) {
-   
+
     if (v == "1234") {
-        localStorage.setItem("PhoneNumber",JSON.stringify(phnnumber));
+        localStorage.setItem("PhoneNumber", JSON.stringify(phnnumber));
         document.querySelector("#loginpage").style.display = "none";
         document.querySelector("#loginbtn").innerText = "Team Titan"
 
         alert("Login Succesfully");
-        
-        window.location.href="Cart_Page.html";  
-        
 
- 
+        window.location.href = "Cart_Page.html";
+
+
+
     } else {
         error.innerText = "The OTP entered is incorrect."
     }
-    
+
 }
 
 
@@ -183,7 +183,7 @@ var DealsOftheDayOBJ = [{
 },
 ]
 
-DealsOftheDayOBJ.map(function (ele,index) {
+DealsOftheDayOBJ.map(function (ele, index) {
     var div = document.createElement("div");
     var div2 = document.createElement("div");
     div2.setAttribute("id", "DealsofTheDayImg");
@@ -215,7 +215,7 @@ DealsOftheDayOBJ.map(function (ele,index) {
     document.getElementById("DealsofTheDay").append(div);
 
     img.addEventListener("click", function(){
-        FecthDealsOftheDayProduct(index);
+        FetchDealOftheDay(index);
         
     });
 
@@ -268,7 +268,7 @@ var InTheSpotLightOBJ = [{
 },
 ]
 
-InTheSpotLightOBJ.map(function (ele , index) {
+InTheSpotLightOBJ.map(function (ele, index) {
     var div = document.createElement("div");
     var div2 = document.createElement("div");
     div2.setAttribute("id", "InTheSpotLightImg");
@@ -298,9 +298,315 @@ InTheSpotLightOBJ.map(function (ele , index) {
 
     div.append(div2, p, p2, p3);
     document.getElementById("InTheSpotLight").append(div);
-    img.addEventListener("click", function(){
+    img.addEventListener("click", function () {
         FecthSpotLightProduct(index);
-        
+
     });
 
 })
+
+
+
+//  Storing Product in Local Storage to append it in product page
+
+
+function FetchDealOftheDay(i){
+    event.preventDefault();
+    var arr = DealsOftheDayOBJ.filter(function(ele,index){
+        if(index===i){
+            localStorage.setItem("ProductImg",JSON.stringify(ele.img_url));
+            localStorage.setItem("ProductName",JSON.stringify(ele.name));
+            localStorage.setItem("ProductPrice",ele.price);
+            localStorage.setItem("ProductMRP",ele.mrp);
+            localStorage.setItem("ProductOff",JSON.stringify(ele.off));
+        }
+        window.location.href="/Product page/Product.html";
+    })
+   
+    
+}
+
+function FecthSpotLightProduct(i){
+    event.preventDefault();
+    var arr = InTheSpotLightOBJ.filter(function(ele,index){
+        if(index===i){
+            localStorage.setItem("ProductImg",JSON.stringify(ele.img_url));
+            localStorage.setItem("ProductName",JSON.stringify(ele.name));
+            localStorage.setItem("ProductPrice",ele.price);
+            localStorage.setItem("ProductMRP",ele.mrp);
+            localStorage.setItem("ProductOff",JSON.stringify(ele.off));
+        }
+        window.location.href="/Product page/Product.html"; 
+    })
+   
+
+}
+
+
+
+// Add to Cart
+
+var cart = JSON.parse(localStorage.getItem("cart"));
+// console.log(cart);
+ShowCartProd();
+function ShowCartProd() {
+    // document.getElementById("PriceBreakoutSection").innerHTML="";
+    if (cart == null || cart.length == 0) {
+        // document.getElementById("IteminCartDiv").innerHTML = "";
+        var h4 = document.createElement("h4");
+        h4.setAttribute("id", "itemincart");
+        h4.innerText = "Cart is Empty"
+        var IteminCartDiv =document.createElement("div");
+        IteminCartDiv.append(h4);
+        document.getElementById("ProductSection").append(h4);
+    }
+    else {
+      
+        // document.getElementById("ProductDetails").innerHTML = "";
+        var ProductSection = document.createElement("div");
+        ProductSection.setAttribute("id", "ProductSection");
+
+
+        var h4 = document.createElement("h4");
+        h4.setAttribute("id", "itemincart");
+        h4.innerText = cart.length + " Item in Cart"
+        document.getElementById("ProductSection").append(h4);
+
+
+        let TotalcartValue = 0;
+        let TotalMRP = 0;
+        cart.map(function (ele, index) {
+            // document.getElementById("ProductSection").innerHTML = "";
+            var TotalCartPriceValue = Math.round(ele.productPrice*ele.productQuantity)
+            TotalcartValue= TotalcartValue+TotalCartPriceValue;
+            TotalMRP =TotalMRP+(ele.productMrp*ele.productQuantity);
+
+
+
+            var mainProdDiv = document.createElement("div");
+            mainProdDiv.setAttribute("id","ProductDetails");
+            var imgDiv = document.createElement("div");
+            imgDiv.setAttribute("id", "prodimg");
+            var img = document.createElement("img");
+            img.setAttribute("src", ele.productImg)
+            imgDiv.append(img);
+
+            var prodnameDiv = document.createElement("div");
+            prodnameDiv.setAttribute("id", "prodnamediv");
+            var prodnameh4 = document.createElement("h4");
+            prodnameh4.innerText = ele.productName;
+            var pBrandName = document.createElement("p");
+            pBrandName.setAttribute("id", "BrandName");
+            pBrandName.innerText = "by Pharmesy Store";
+            var qtydiv = document.createElement("div");
+            qtydiv.setAttribute("id","qtysection" );
+
+            var DcrQtyBtn = document.createElement("button");
+            DcrQtyBtn.setAttribute("id", "DcrQtyBtn");
+            DcrQtyBtn.setAttribute("class", "btn btn-danger");
+            DcrQtyBtn.setAttribute("type", "button");
+            DcrQtyBtn.innerText = "-";
+            DcrQtyBtn.addEventListener("click", function(){
+                DcrQtyBtn(index);
+              })
+
+
+
+            var addqtybutton = document.createElement("button");
+            addqtybutton.setAttribute("id", "addqtybtn");
+            addqtybutton.setAttribute("class", "btn btn-light");
+            addqtybutton.setAttribute("type", "button");
+            addqtybutton.innerText = ele.productQuantity;
+            addqtybutton.addEventListener("click", function(){
+                addqtyFunc(index);
+              })
+
+            var IncQtyBtn = document.createElement("button");
+            IncQtyBtn.setAttribute("id", "IncQtyBtn");
+            IncQtyBtn.setAttribute("class", "btn btn-success");
+            IncQtyBtn.setAttribute("type", "button");
+            IncQtyBtn.innerText = "+";
+            IncQtyBtn.addEventListener("click", function(){
+                IncQty(index);
+              })
+            
+            qtydiv.append(DcrQtyBtn,addqtybutton,IncQtyBtn);
+         
+
+          var DeliveryDate = document.createElement("p");
+          DeliveryDate.setAttribute("id", "DeliveryDate");
+          DeliveryDate.innerText ="Delivery by Tommorow Before 10 pm";
+          prodnameDiv.append(prodnameh4, pBrandName,qtydiv,DeliveryDate);
+        //   mainProdDiv.append(imgDiv,prodnameDiv);
+        var ProductDetails = document.createElement("div");
+        ProductDetails.setAttribute("id", "ProductDetails");
+
+        var DeleteSection = document.createElement("div");
+        DeleteSection.setAttribute("id","DeleteSection");
+        var icon = document.createElement("i");
+        icon.setAttribute("id", "delicon");
+        icon.setAttribute("class", "fa-sharp fa-solid fa-trash");
+        icon.style="cursor-pointer";
+        icon.addEventListener("click", function(){
+            DeleteItemFromCart(ele.productName);
+        });
+        icon.style="cursor:pointer";
+        var mrp = document.createElement("div");
+        var off =document.createElement("p");
+        off.innerText = "MRP ₹" + ele.productMrp;
+        var offSpan = document.createElement("span");
+        offSpan.setAttribute("id", "off");
+        offSpan.innerText = "-"+ele.productOff;
+        off.append(offSpan);
+        mrp.append(off);
+
+        var priceP = document.createElement("p");
+        priceP.setAttribute("id","price");
+        priceP.innerText ="₹"+ele.productPrice*ele.productQuantity;
+
+        DeleteSection.append(icon,mrp, priceP);
+
+        ProductDetails.append(imgDiv,prodnameDiv,DeleteSection);
+          document.getElementById("ProductSection").append(ProductDetails)
+
+        // Apending cart VAlue
+        var cartValue = document.getElementById('PriceBreakoutSection').innerHTML="";
+         var cartValueP= document.createElement("p");
+         cartValueP.setAttribute("id","CartValue");
+         cartValueP.innerText="₹"+TotalcartValue;
+         var discount = document.createElement("span");
+         discount.innerText = " MRP "+"₹"+TotalMRP;
+         discount.setAttribute("id","discount");
+         cartValueP.append(discount);
+        var hrlinePriceBreakdown1 = document.createElement("hr");
+        hrlinePriceBreakdown1.setAttribute("id","hrlinePriceBreakdown1");
+
+        var AmountTobePaid=document.createElement("p");
+        AmountTobePaid.innerText="₹"+TotalcartValue;;
+
+        var hrlinePriceBreakdown2 = document.createElement("hr");
+        hrlinePriceBreakdown2.setAttribute("id","hrlinePriceBreakdown2");
+
+        document.getElementById("PriceBreakoutSection").append(cartValueP,hrlinePriceBreakdown1,AmountTobePaid,hrlinePriceBreakdown2);
+
+
+
+ 
+
+        })
+
+        localStorage.setItem("TotalCartvalue", JSON.stringify(TotalcartValue));
+        localStorage.setItem("TotalMRP", JSON.stringify(TotalMRP));
+        
+
+    }
+    
+}
+
+
+
+
+//  Delte item from cart function 
+
+
+function DeleteItemFromCart(pname){
+    var cart = JSON.parse(localStorage.getItem("cart"));
+    let newCart = cart.filter((item)=>item.productName !=pname)
+    localStorage.setItem("cart",JSON.stringify(newCart));
+   window.location.href = "/Cart_page/Cart_Page.html";
+
+}
+
+// function IncQty(pname){
+    
+// }
+
+// function DcrQty(pnmae){
+//     // var cart = JSON.parse(localStorage.getItem("cart"));
+//     // let newCart = cart.filter((item)=>item.productName !=pname)
+//     // localStorage.setItem("cart",JSON.stringify(newCart));
+//    window.location.href = "/Cart_page/Cart_Page.html";
+
+// }
+
+
+//  Show Address When User click Add to Address button
+
+function Addressbtn(){
+    var PhoneNumber = JSON.parse(localStorage.getItem("PhoneNumber"));
+    if(PhoneNumber==null){
+        showlogin();
+        
+    }
+    else{
+      ShowAddress();
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+function ShowAddress() {
+    document.querySelector("#AdressPage").style.display = "block";
+
+    document.querySelector("#AdressPage").style.opacity = "1";
+
+}
+document.querySelector("#closebtnAdress").addEventListener("click", HideAdress)
+
+function HideAdress() {
+    document.querySelector("#AdressPage").style.display = "none";
+    document.querySelector('body').style.opacity = "1";
+
+}
+
+
+
+document.querySelector("#AdressForm").addEventListener("submit",Checkout);
+
+
+function Checkout(){
+    event.preventDefault()
+    var phnnumber = parseInt(document.getElementsByClassName("Entername").value);
+    var Adress = document.getElementsByClassName("EnternAdress").value;
+    var Phone = document.getElementsByClassName("EnterPhone").value;
+    var PinCode = document.getElementsByClassName("EnterPinCode").value;
+    var Name = document.getElementsByClassName("Entername").value;
+    // var Name = loginform.Entername.value;
+
+    if(phnnumber.length<10 || Name =="" || Adress=="" || PinCode==""){
+        alert("Please Enter All Details")
+        
+        console.log("1")
+    }
+    // if(Name==""){
+    //     alert("Please Enter Name")
+    // }
+    // if(Adress==""){
+    //    alert("Please Enter Address")
+    // }
+    // if(PinCode==""){
+    //       alert("Please Enter pinCode")
+    // }
+    else{
+     
+        window.location.href="/Payment Page/Payment_Page.html"
+       
+    }
+}
+    
+
+
+
+    
+     
+
+

@@ -426,3 +426,97 @@ function FecthSpotLightProduct(i){
 }
  
 
+document.getElementById("addqtybtn").addEventListener("click",Add_To_cart);
+
+var pimg = JSON.parse(localStorage.getItem("ProductImg"));
+var pname = JSON.parse(localStorage.getItem("ProductName"));
+ var  price = JSON.parse(localStorage.getItem("ProductPrice"));
+var pmrp = JSON.parse(localStorage.getItem("ProductMRP"));
+ var poff = JSON.parse(localStorage.getItem("ProductOff"));
+
+function Add_To_cart( pimg,pname, price, pmrp, poff,pqty){
+    let cart = localStorage.getItem("cart");
+    if(cart==null){
+      let products =[];
+      let product = { productImg : JSON.parse(localStorage.getItem("ProductImg")),
+       productName: JSON.parse(localStorage.getItem("ProductName")) ,
+         productPrice: (localStorage.getItem("ProductPrice")),
+          productMrp : (localStorage.getItem("ProductMRP")), 
+          productOff: JSON.parse(localStorage.getItem("ProductOff")),
+        productQuantity : 1,};
+      products.push(product);
+      localStorage.setItem("cart", JSON.stringify(products));
+      console.log("Product added first ftime")
+      
+    }
+    else{
+        let pcart = JSON.parse(cart);
+        var curProdname = JSON.parse(localStorage.getItem("ProductName"));
+       let oldproduct = pcart.find((item)=>item.productName==curProdname);
+   
+
+
+       console.log(oldproduct)
+       if(oldproduct){
+       oldproduct.productQuantity=parseInt(oldproduct.productQuantity)+1;
+        pcart.map((item)=>{
+            if(item.productPrice==oldproduct.productPrice){
+                item.productQuantity= oldproduct.productQuantity;
+            }
+        })
+       localStorage.setItem("cart", JSON.stringify(pcart));
+       console.log("product qty increased")
+       }
+       
+       else{
+        let product = { productImg : JSON.parse(localStorage.getItem("ProductImg")),
+        productName: JSON.parse(localStorage.getItem("ProductName")) ,
+          productPrice: (localStorage.getItem("ProductPrice")),
+           productMrp : (localStorage.getItem("ProductMRP")), 
+           productOff: JSON.parse(localStorage.getItem("ProductOff")),
+         productQuantity : 1,};
+          pcart.push(product);
+          localStorage.setItem("cart", JSON.stringify(pcart));
+          console.log("prodcut is added")
+       }
+        
+    }
+}
+updateCart();
+function updateCart(){
+   
+  let cart =  JSON.parse(localStorage.getItem("cart"));
+//   var ItemInCartLine = document.getElementById("addedtoCartSuccess");
+  if(cart==null || cart.length==0){
+  console.log("cart is empty");
+  document.getElementById("ItemAddedToCartDiv").innerHTML="";
+  var h4 =document.createElement("h4");
+  h4.innerText = "Cart Is Empty"
+  h4.setAttribute("id","addedtoCartSuccess");
+  var p =document.createElement("p");
+  p.setAttribute("id",  "PleaseAddItem");
+  p.innerText="Please Add Item To cart"
+  document.getElementById("ItemAddedToCartDiv").append(h4,p);
+  var cartIcon = document.getElementById("carticonQty");
+     cartIcon.innerText = "(0)";
+    
+  }
+  else{
+    var h4 =document.createElement("h4");
+    document.getElementById("ItemAddedToCartDiv").innerHTML="";
+  h4.innerText = cart.length+ " Item Added  to Cart";
+  h4.setAttribute("id","addedtoCartSuccess");
+  document.getElementById("ItemAddedToCartDiv").append(h4);
+  var cartIcon = document.getElementById("carticonQty");
+     cartIcon.innerText = "("+cart.length+")";
+     
+  }
+  
+
+
+   
+}
+
+document.getElementById("addqtybtn").addEventListener("click", updateCart);
+
+
