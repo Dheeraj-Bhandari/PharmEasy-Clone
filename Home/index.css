@@ -7,19 +7,22 @@
     margin: 0px;
     /* box-sizing: border-box; */
 }
+
+/* NavBar */
+
 #navbar{
   
     display: flex;
-    /* width: 80%; */
-    /* height: 50px; */
-    border: 2px solid  red;
+    width: 80%;
+    height: 7%;
+    /* border: 2px solid  red; */
     justify-content: flex-start;
     margin: auto;
     background-color: white;
     
-    box-shadow: rgb(0 0 0 / 4%) 0px 6px 8px;
-    transition: all 0.3s ease-in 0s;
-    z-index: 2;
+    /* box-shadow: rgb(0 0 0 / 4%) 0px 6px 8px; */
+    /* transition: all 0.3s ease-in 0s;
+    z-index: 2; */
     /* height: var(--sizes-8); */
     box-sizing: border-box;
     margin-top: -10px;
@@ -28,6 +31,7 @@
 }
 #navbar img{
     cursor: pointer;
+    margin-top: 10px;
 }
 #navbarDelivery {
     margin-left: 20px;
@@ -37,11 +41,11 @@
     
 }
 #pipe{
-  
+    border-radius: 100px;
     height: 80%;
     margin-top: 10px;
     margin-left: 15px;
-    border: 2px solid black;
+    border: 2px solid rgb(141, 138, 138);
 }
 #navbarDelivery p{
    font-size: 11px;
@@ -57,8 +61,9 @@
 
     display: flex;
     font-size: small;
-    
+    background-color: white;
     width: 400px;
+    /* color: 2px solid black; */
     
     margin-left: 500px;
     margin-top: 10px;
@@ -92,20 +97,111 @@
 
 #belowNavbar{
     display: flex;
-    margin: auto;
-    width: 100%;
+    /* margin: auto; */
+    /* width: 100%; */
     /* border: 2px solid black; */
-    height: 100px;
-    margin-top: 50px;
+   
+    margin-top: 10px;
     
 }
+
+
+/* login Page */
+
+#loginpage {
+    height: 800px;
+    width: 450px;
+    background-color: white;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    display: none;
+    
+  }
+  #logintop {
+    background-color: #10847e;
+    /* border: 2px solid red; */
+    background-image: url("https://assets.pharmeasy.in/web-assets/dist/1fe1322a.svg?dim=256x0");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-size: contain;
+    padding: 20px;
+    display: flex;
+  }
+  #logintop button {
+    position: absolute;
+    left: -40px;
+    background-color: #10847e;
+    width: 50px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    padding: 7px;
+    border: none;
+    opacity: 1 !important;
+  }
+  
+  #logintop > img {
+    width: 50%;
+  }
+  #loginbottom {
+    padding: 10px;
+    /* border: 1px solid red; */
+    width: 80%;
+    margin: auto;
+  }
+  #loginbottom label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  #loginbottom input {
+    display: block;
+    margin-bottom: 10px;
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 17px;
+  }
+  #loginbottom p {
+    font-size: 15px;
+    text-align: justify;
+  }
+  #continuepart {
+    background-color: #10847e;
+    color: white;
+    font-weight: 500;
+  }
+
+/* DropDown LogOut on nvaBar */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+
+/* Below Navbar section */
 
 #belowNavbar  h5{
    
     text-align: center;
     /* width: 80%; */
     margin: auto;
-    margin-top: 60px;
+    margin-top: 90px;
     font-weight: bold;
     
 }
@@ -321,92 +417,10 @@
     font-family: sans-serif;
   }
 
-/* DropDown LogOut on nvaBar */
-.dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
 
 
-  /* login Page */
 
-  #loginpage {
-    height: 800px;
-    width: 450px;
-    background-color: white;
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    display: none;
-    
-  }
-  #logintop {
-    background-color: #10847e;
-    /* border: 2px solid red; */
-    background-image: url("https://assets.pharmeasy.in/web-assets/dist/1fe1322a.svg?dim=256x0");
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-size: contain;
-    padding: 20px;
-    display: flex;
-  }
-  #logintop button {
-    position: absolute;
-    left: -40px;
-    background-color: #10847e;
-    width: 50px;
-    font-size: 30px;
-    color: white;
-    text-align: center;
-    padding: 7px;
-    border: none;
-    opacity: 1 !important;
-  }
   
-  #logintop > img {
-    width: 50%;
-  }
-  #loginbottom {
-    padding: 10px;
-    /* border: 1px solid red; */
-    width: 80%;
-    margin: auto;
-  }
-  #loginbottom label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  #loginbottom input {
-    display: block;
-    margin-bottom: 10px;
-    width: 90%;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 17px;
-  }
-  #loginbottom p {
-    font-size: 15px;
-    text-align: justify;
-  }
-  #continuepart {
-    background-color: #10847e;
-    color: white;
-    font-weight: 500;
-  }
 
 /* <!-- Offer just For You Section --> */
 
