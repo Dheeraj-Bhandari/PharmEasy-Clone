@@ -4,16 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Product | PharmEasy | India’s Biggest Online Pharmeasy</title>
+    <title>Bootstrap demo</title>
     <link rel="icon" type="image/x-icon" href="https://assets.pharmeasy.in/apothecary/images/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="/Product page/product.css">
-    <script src="https://kit.fontawesome.com/d6b32c1f32.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/Cart_page/Cart_Page.css">
 </head>
 
 <body>
-  
     <div class="container">
         <div id="navbar">
             <a href="/index.html"> <img src="https://assets.pharmeasy.in/apothecary/images/logo_big.svg?dim=256x0"
@@ -89,129 +87,103 @@
     <!-- <div id="belowNavBarLine"> -->
     <div id="belowNavbarData">
         <!-- <div class="container"> -->
-            <div id="belownavbardata">
-                <!-- <span>Medicine <span></span>Healthcare <span>Lab Tests <span>Offers <span>PLUS <span>Health Blogs</span></span></span></span></span> -->
-                <div id="belowNavdataContainer" class="container">
-                    <p>Medicine</p>
-                    <p>Healthcare</p>
-                    <p>Lab Tests</p>
-                     <p>Offers</p>
-                    <p>PLUS</p>
-                    <p>Health Blogs</p>
-                </div>
-                    
-                
-                
-                
+        <div id="belownavbardata">
+            <!-- <span>Medicine <span></span>Healthcare <span>Lab Tests <span>Offers <span>PLUS <span>Health Blogs</span></span></span></span></span> -->
+            <div id="belowNavdataContainer" class="container">
+                <p>Medicine</p>
+                <p>Healthcare</p>
+                <p>Lab Tests</p>
+                <p>Offers</p>
+                <p>PLUS</p>
+                <p>Health Blogs</p>
+            </div>
+
+
+
+
             <!-- </div> -->
         </div>
 
     </div>
-    <!-- </div> -->
 
 
-
+    <!-- Product Section -->
     <div class="container">
-        <!-- Product Section -->
-
-        <div id="productSection">
-            <div id="ProdDetails">
-                <div id="imgSection">
-                    <div id="largeProdImg">
-                        <img src="" alt="">
+        <div id="CartSection">
+            <div id="ProductSection">
+                <h4 id="itemincart">2 Item in Cart</h4>
+                <div id="ProductDetails">
+                    <div id="prodimg">
+                        <img src="https://cdn01.pharmeasy.in/dam/products_otc/I40695/dettol-antiseptic-liquid-bottle-of-550-ml-2-1656923531.jpg?dim=320x320&dpr=1&q=100"
+                            alt="">
                     </div>
-                    <div id="smallProdImagediv">
-                        <img src="" alt="" id="smallProdImage">
+                    <div id="prodnamediv">
+                        <h4 id="prodname">Dettol Anitseptic Liquid Bottle</h4>
+                        <p id="BrandName">by Dettol</p>
+                        <div id="qtysection">
+                            <button id="addqtybtn" type="button" class="btn btn-success">Add Qty
+                                <select name="addqty" id="AddQty">
+                                    <option selected>Select Qty</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+    
+                                </select>
+                            </button>
+    
+                        </div>
+                        <P id="DeliveryDate">Delivery by Tommorow Before 10 pm</P>
                     </div>
-
-
-                </div>
-                <div id="prodDetailsSection">
-                    <div id="prodDetails">
-                        <h5 id="prodname"></h5>
-                        <span id="prodrating"><i class="fa-sharp fa-solid fa-star"></i><i
-                                class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i
-                                class="fa-sharp fa-solid fa-star"></i><i
-                                class="fa-sharp fa-solid fa-star-half-stroke"></i> <span>(45 Rating)</span></span>
-                        <p id="Prodprice"><span id="mrp">MRP 299</span> <span id="off">2% OFF</span></p>
-                        <p id="inclusive">Inclusive of all taxes</p>
-                        <p id="deliveryDate">deliveryDate 09 Sep - 10 Sep</p>
-
+                    <div id="DeleteSection">
+                        <i id="delicon" class="fa-sharp fa-solid fa-trash"></i>
+                        <div id="mrp">
+                            <p>420.12 <span id="off">12% OFF</span></p>
+                        </div>
+                        <p id="Price">376.75</p>
                     </div>
-                    <div id="qtysection">
-                        <button id="addqtybtn" type="button" class="btn btn-success">Add Qty
-                            <select name="addqty" id="AddQty">
-                                <option selected>Select Qty</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-
-                            </select>
-                        </button>
-
-                    </div>
-                    <hr id="hrline">
                 </div>
             </div>
-
-            <div id="viewCart">
-                <button id="ViewCartbtn" type="button" class="btn btn-success">View Cart </button>
-                <img src="/Team-Titan-Pharmeasy-Project/Product page/img/Offer just for you.png" alt="">
+    
+            <div id="OrderSummarySection">
+                <div id="applyCoupon">
+                    <i class="fa-solid fa-tire-rugged"></i>
+                </div>
+                <button id="OrderBtn"  type="button" class="btn btn-success">Add Delivery Address</button>
+                <Order id="Summary">
+                    <div id="priceBreakdown">
+                
+                        <div id="cartValue">
+                            
+                            
+                            <p>Cart value </p>
+                            <p>Delivery Charges</p>
+                            <p>Packaging Charges</p>
+                            <hr id="hrlinePriceBreakdown">
+                            <p>Ammount to be paid</p>
+                            <hr id="hrlinePriceBreakdown">
+                        </div>
+                        <div id="PriceBreakoutSection">
+                            
+                            <p id="CartValue"> <span id="discount">₹54.90</span> ₹20</p>
+                            <p id="DeliveryCharges">₹50</p>
+                            <p id="PackagingCharges"> <span id="packagingchargesspan">₹54.90</span> ₹30</p>
+                            <hr id="hrlinePriceBreakdown">
+                            <p id="AmountTobePaid">₹120</p>
+                            <hr id="hrlinePriceBreakdown">
+                        </div>
+            
+                       
+                    </div>  
+                </Order>
+    
             </div>
         </div>
+        
 
-
-        <!-- Deal of the day -->
-        <h4 id="DealsofTheDayH4">Deals of the Day</h4>
-
-        <div id="DealsofTheDay"></div>
-
-
-
-        <!-- In the spot light  -->
-
-        <div id="InTheSpotLightContainer">
-
-            <h4 id="InTheSpotLightH4">In The SpotLight</h4>
-            <div id="InTheSpotLight"></div>
-        </div>
-
-        <!--  Decription-->
-        <div id="productDetailsDescription">
-            <div id="productDescription">
-                <P>Product name: Horlicks Junior Health & Nutrition Drink Vanilla, 500 G Jar</P>
-                <p>Expires on or After: 30/01/2023</p>
-                <p>Country of Origin India</p>
-            </div>
-
-            <hr>
-            <div id="desclaimer">
-                <p>Disclaimer</p>
-                <p>Disclaimer THE CONTENTS OF THIS WEBSITE ARE FOR INFORMATIONAL PURPOSES ONLY AND ARE NOT INTENDED TO
-                    BE A
-                    SUBSTITUTE FOR PROFESSIONAL MEDICAL ADVICE, DIAGNOSIS, TREATMENT, OR PREVENTION OF A DISEASE OR
-                    MEDICAL
-                    CONDITION. PLEASE CONSULT A PHYSICIAN FOR THE TREATMENT AND/OR MANAGEMENT OF ANY DISEASE OR MEDICAL
-                    CONDITION WITHOUT DELAY.</p>
-            </div>
-        </div>
-
-
-        <hr>
-
-        <div id="rating">
-            <img src="/Team-Titan-Pharmeasy-Project/Product page/img/review.png" alt="">
-        </div>
-
-        <!-- Heallth Articles -->
-
-        <h4 id="HealthArticleH4">Health Articles</h4>
-        <p id="HealthArticleP">Get up-to-date on our latest health updates</p>
-
-        <div id="HealthArticles"></div>
     </div>
 
-    <!-- Footer -->
+
+
 
     <div id="FooterPicSection">
         <hr id="hrfooter1">
@@ -321,13 +293,11 @@
 
     </div>
 
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
-    <script src="/Product page/Product.js"></script>
+    <script src="/Cart_page/Cart.Page.js"></script>
+    <script src="https://kit.fontawesome.com/d6b32c1f32.js" crossorigin="anonymous"></script>
 </body>
-
 
 </html>
