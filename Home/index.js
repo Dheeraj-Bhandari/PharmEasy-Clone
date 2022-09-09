@@ -95,16 +95,17 @@ function logoutFunc(){
 }
 
 function ShopFunc(){
-    window.location.href="Product_Catogery.html";  
+    window.location.href="/Product_Catogery.html";  
 }
 
 function carFunc(){
 
+    window.location.href="/Cart_page/Cart_Page.html"; 
 
 }
 
 function OfferFunc(){
-    window.location.href="Offer_Page.html";  
+    window.location.href="/Offer_Page.html";  
 }
 
 function CatogeryFunc(){

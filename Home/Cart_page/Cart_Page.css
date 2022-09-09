@@ -16,7 +16,7 @@
 #navbar{
   
     display: flex;
-    width: 80%;
+    width: 50%;
     height: 7%;
     /* border: 2px solid  red; */
     justify-content: flex-start;
@@ -241,14 +241,14 @@
     display: grid;
     grid-template-columns: repeat(2,1fr);
     width: 100%;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     margin-top: 100px;
     /* justify-content: space-around; */
 }
 
 /* Product Section */
 #itemincart{
-    margin-top: 10%;
+    /* margin-top: 4%; */
     margin-left: 65px;
     font-weight: bold;
     /* border: 2px solid red; */
@@ -256,13 +256,22 @@
 
 
 #ProductSection{
-    border: 2px solid red;
-    /* width: 60%; */
+    /* border: 2px solid rgb(63, 180, 108); */
+   width: 100%;
+
+   
+}
+#ProductSection>div{
+    margin: 10px;
+    width: 100%;
+    height: 200px;
+    /* border: 2px solid chocolate; */
+
 }
 #ProductDetails{
     display: flex;
-    border: 2px solid red;
-    /* width: 50%; */
+    /* border: 2px solid red; */
+    width: 100%;
     height: 250px;
    
     /* margin-left: 60px; */
@@ -273,66 +282,124 @@
 }
 
 #prodimg > img{
-    width: 35%;
-    border: 2px solid red;
-    margin: 20%;
+    width: 100px;
+    /* border: 2px solid red; */
+    /* margin: 20%; */
+    padding: 10%;
+    margin-top: 30px;
 
 }
+
+#IteminCartDiv{
+    border: 2px solid rgb(20, 18, 18);
+}
+
+
 
 #mrp p{
     text-decoration: line-through;
     font-size: small;
-    margin: 5%;
+    /* margin: 5%; */
+
+  
 }
 
 
 
 #prodnamediv{
-    border: 2px solid red;
-    margin-right: 20px;
+    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px; */
+    border: #4F585E;
+    margin-left: 60px;
+    /* height: 80%; */
+
+
+}
+#DeliveryDate{
+    font-size: small;
+}
+
+#prodnameDiv p{
+    /* border: 2px solid teal; */
+    font-size: small;
+   
     
 }
+
 
 #DeliveryDate{
     margin-top: 15px;
 }
 
 #DeleteSection{
-    border: 2px solid red;
-    height: 200px;
+    /* border: 2px solid rgb(11, 12, 12); */
+    margin-left: 50px;
+margin-top: 20px;
+    justify-content: flex-end;
+    align-content: flex-end;
+    justify-content: center;
+   
+
+    
 
 }
+
+#DeleteSection p{
+width: 150px;
+/* margin: 10px; */
+}
+
+#off{
+    text-decoration: line-through;
+}
+#mrp+p{
+    text-decoration: none;
+}
+
+#price{
+    font-weight: bold;
+}
+
+
 #delicon{
     /* width: 30px; */
-    align-self: center;
+    /* align-self: center;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 #mrp{
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 #Price{
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 /* Order Summary  */
 
 #OrderSummarySection{
     display: flex;
-    border: 5px solid teal ;
-    width: 80%;
-    align-self: flex-start;
-    margin-left: 80px;
+    /* border: 5px solid teal ; */
+    width: 100%;
+    height: 200px;
+   
+
     
 }
 #cartValue{
-    border: 2px solid gold;
-    margin-left: 100px;
+    /* border: 2px solid gold; */
+    /* margin-left: 100px; */
+    margin-top: -20px;
 }
 
 #PriceBreakoutSection{
-    border: 2px solid magenta;
+    /* border: 2px solid rgb(68, 168, 38); */
+  
+}
+
+#amttopay{
+width: 200px;
+font-weight: bold;
+/* border: 2px solid red; */
 }
 
 
@@ -341,11 +408,14 @@
 
 #OrderBtn{
     background: #10847E;
+
     height: 45px;
     font-weight: 700;
     width: 300px;
     /* border: 2px solid red; */
     margin-top: 50px;
+    margin-left: 200px;
+
     }
     #OrderBtn:hover{
         background: #427270;
@@ -355,22 +425,24 @@
 
 
 
-#priceBreakdown{
-    display: flex;
-   position: relative;
-   width: 50%;
 
-    flex-direction: row-reverse;
-
-}
 
 /* Price BreakDonw Section */
 
+#cartValue p{
+    margin-left: 50px;
+}
+
+
+#PriceBreakoutSection p{
+    margin-left: 50px;
+}
+
 #priceBreakdown{
-    margin-top: 20px;
+    /* margin-top: 20px; */
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    width: 40%;
+    width: 100%;
     margin-top: 70px;
     margin-left: -300px;
     
@@ -394,6 +466,10 @@
    margin-top: 50px;
 
 }
+#AmountTobePaid{
+    font-weight: bold;
+}
+
 #cartValue,#PriceBreakoutSection p{
    font-size: large;
 }
@@ -417,11 +493,15 @@ font-weight: lighter;
 font-size: medium;
 }
 #hrlinePriceBreakdown{
-    width: 100%;
+    /* width: 100%;
     text-align: center;
     margin-left: 5%;
-    margin-top: 0%;
+    margin-top: 0%; */
 
+}
+
+#hrlinePriceBreakdown2{
+    /* margin-bottom: 150px; */
 }
 
 
@@ -510,3 +590,264 @@ font-size: medium;
     margin: 20px;
 
 }
+
+/*  */
+
+/* Deal of the day */
+
+#DealsofTheDayH4{
+    font-weight: bold;
+    margin-top: 4%;
+}
+
+#DealsofTheDay{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 20px;
+    /* border: 2px solid red; */
+}
+
+#DealsofTheDay+div{
+    /* border: 2px solid red; */
+   
+    border: 1px solid #E6EBF4;
+}
+
+#DealsofTheDay>div{
+    width: 178px;
+    height: 190px;
+    border-radius: 8px;
+    margin-top: 5%;
+    border: 1px solid #E6EBF4;
+    /* border: 2px solid red; */
+}
+#DealsofTheDay>div:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+    
+   
+}
+
+#DealsofTheDayImg{
+    /* border: 2px solid red; */
+    /* width: 100%; */
+    /* height: 190px; */
+
+}
+#DealsofTheDayImg img{
+  width: 80%;
+ /* width: 50%; */
+ height: 150px;
+ margin: auto;
+ padding-top: 20px;
+ padding-left: 25px;
+
+ /* margin-left:45px; */
+ /* margin-top: 10px; */
+ /* object-fit: cover; */
+ /* border: 2px solid red; */
+  
+    
+}
+
+#DealsofTheDayProdName{
+    padding-top: 5em;
+    font-size: 14px;
+    color: #30363C;
+    font-weight: lighter;
+    
+}
+
+#DealsofTheDayMRP{
+    color: #CAD1D6;
+    font-size: 13px;
+    margin-top: -10px;
+    font-weight: bold;
+}
+
+#DealsofTheDayMRP span{
+    text-decoration: line-through;
+   
+}
+
+#DealsofTheDayPrice{
+    font-weight: lighter;
+    margin-top: -0.5em;
+}
+#DealsofTheDayPrice span{
+   
+    font-size: 13px;
+    margin-left: 2px;
+    color: #F47D7F;
+    font-weight: bold;
+}
+
+/* In the SpotLight */
+#InTheSpotLightContainer{
+   margin-top: 12em;
+    border-top: none;
+    /* background: url(https://assets.pharmeasy.in/apothecary/images/spotlightBig.svg) no-repeat, linear-gradient(rgb(255, 248, 227) 0%, rgba(255, 255, 255, 0) 100%); */
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 450px;
+    
+}
+
+#InTheSpotLightH4{
+    font-weight: bold;
+    margin-top: 3%;
+    margin-left: 2%;
+    margin-bottom: 5%;
+}
+
+#InTheSpotLight{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 20px;
+    /* border: 2px solid red; */
+}
+
+#InTheSpotLight+div{
+    /* border: 2px solid red; */
+   
+    /* border: 1px solid #E6EBF4; */
+    
+}
+
+#InTheSpotLight>div{
+    width: 80%;
+    height: 180px;
+    border-radius: 8px;
+    /* margin-top: 5%; */
+    margin: 3%;
+    margin: auto;
+    /* border: 1px solid #E6EBF4; */
+    
+}
+#InTheSpotLight>div:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+    
+}
+
+#InTheSpotLightImg img{
+    width: 100%;
+ height: 175px;
+ 
+}
+
+#InTheSpotLightProName{
+    padding-top: 5em;
+    font-size: 14px;
+    color: #30363C;
+    font-weight: lighter;
+    margin-top: -50px;
+    
+}
+
+#InTheSpotLightMRP{
+    color: #CAD1D6;
+    font-size: 13px;
+    margin-top: -10px;
+    font-weight: bold;
+}
+
+#InTheSpotLightMRP span{
+    text-decoration: line-through;
+   
+}
+
+#InTheSpotLightPrice{
+    font-weight: lighter;
+    margin-top: -0.5em;
+}
+#InTheSpotLightPrice span{
+   
+    font-size: 13px;
+    margin-left: 2px;
+    color: #F47D7F;
+    font-weight: bold;
+}
+
+/* Add address part */
+
+/* login Page */
+
+/* login Page */
+
+#AdressPage {
+    height: 800px;
+    width: 450px;
+    background-color: white;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    display: none;
+  
+  }
+  #logintop {
+    background-color: #10847e;
+    /* border: 2px solid red; */
+    background-image: url("https://assets.pharmeasy.in/web-assets/dist/1fe1322a.svg?dim=256x0");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-size: contain;
+    padding: 20px;
+    display: flex;
+  }
+  #logintop button {
+    position: absolute;
+    left: -40px;
+    background-color: #10847e;
+    width: 50px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    padding: 7px;
+    border: none;
+    opacity: 1 !important;
+  }
+  
+  #logintop > img {
+    width: 50%;
+  }
+  #loginbottom {
+    padding: 10px;
+    /* border: 1px solid red; */
+    width: 80%;
+    margin: auto;
+  }
+  #loginbottom label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  #loginbottom input {
+    display: block;
+    margin-bottom: 10px;
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 17px;
+  }
+  #loginbottom p {
+    font-size: 15px;
+    text-align: justify;
+  }
+  #Checkout {
+    background-color: #10847e;
+    color: white;
+    font-weight: 500;
+  }
+
+
+  /* After Js  */
+
+  /* Qty Div Button */
+
+  #qtysection {
+    /* margin: 5px; */
+    
+    size: 20px;
+    width: 100px;
+  }
+ 
