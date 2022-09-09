@@ -517,6 +517,11 @@ function updateCart(){
    
 }
 
-document.getElementById("addqtybtn").addEventListener("click", updateCart);
+document.getElementById("addqtybtn").addEventListener("click", function(){
+    document.getElementById("addqtybtn").innerText= "Added";
+    
+    updateCart();
+    
+});
 
 

@@ -248,7 +248,7 @@
 
 /* Product Section */
 #itemincart{
-    margin-top: 10%;
+    /* margin-top: 4%; */
     margin-left: 65px;
     font-weight: bold;
     /* border: 2px solid red; */
@@ -256,13 +256,22 @@
 
 
 #ProductSection{
-    border: 2px solid red;
-   width: 100%; 
+    /* border: 2px solid rgb(63, 180, 108); */
+   width: 100%;
+
+   
+}
+#ProductSection>div{
+    margin: 10px;
+    width: 100%;
+    height: 200px;
+    /* border: 2px solid chocolate; */
+
 }
 #ProductDetails{
     display: flex;
-    border: 2px solid red;
-    /* width: 50%; */
+    /* border: 2px solid red; */
+    width: 100%;
     height: 250px;
    
     /* margin-left: 60px; */
@@ -273,14 +282,16 @@
 }
 
 #prodimg > img{
-    width: 35%;
-    border: 2px solid red;
-    margin: 20%;
+    width: 100px;
+    /* border: 2px solid red; */
+    /* margin: 20%; */
+    padding: 10%;
+    margin-top: 30px;
 
 }
 
 #IteminCartDiv{
-    border: 2px solid red;
+    border: 2px solid rgb(20, 18, 18);
 }
 
 
@@ -288,38 +299,79 @@
 #mrp p{
     text-decoration: line-through;
     font-size: small;
-    margin: 5%;
+    /* margin: 5%; */
+
+  
 }
 
 
 
 #prodnamediv{
-    /* border: 2px solid red; */
-    margin-right: 20px;
+    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px; */
+    border: #4F585E;
+    margin-left: 60px;
+    /* height: 80%; */
+
+
+}
+#DeliveryDate{
+    font-size: small;
+}
+
+#prodnameDiv p{
+    /* border: 2px solid teal; */
+    font-size: small;
+   
     
 }
+
 
 #DeliveryDate{
     margin-top: 15px;
 }
 
 #DeleteSection{
-    /* border: 2px solid red; */
-    height: 200px;
+    /* border: 2px solid rgb(11, 12, 12); */
+    margin-left: 50px;
+margin-top: 20px;
+    justify-content: flex-end;
+    align-content: flex-end;
+    justify-content: center;
+   
+
+    
 
 }
+
+#DeleteSection p{
+width: 150px;
+/* margin: 10px; */
+}
+
+#off{
+    text-decoration: line-through;
+}
+#mrp+p{
+    text-decoration: none;
+}
+
+#price{
+    font-weight: bold;
+}
+
+
 #delicon{
     /* width: 30px; */
-    align-self: center;
+    /* align-self: center;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 #mrp{
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 #Price{
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 /* Order Summary  */
@@ -327,18 +379,27 @@
 #OrderSummarySection{
     display: flex;
     /* border: 5px solid teal ; */
-    width: 80%;
-    align-self: flex-start;
-    margin-left: 80px;
+    width: 100%;
+    height: 200px;
+   
+
     
 }
 #cartValue{
     /* border: 2px solid gold; */
-    margin-left: 100px;
+    /* margin-left: 100px; */
+    margin-top: -20px;
 }
 
 #PriceBreakoutSection{
-    /* border: 2px solid magenta; */
+    /* border: 2px solid rgb(68, 168, 38); */
+  
+}
+
+#amttopay{
+width: 200px;
+font-weight: bold;
+/* border: 2px solid red; */
 }
 
 
@@ -350,10 +411,10 @@
 
     height: 45px;
     font-weight: 700;
-    width: 500px;
+    width: 300px;
     /* border: 2px solid red; */
     margin-top: 50px;
-    /* margin-left: 200px; */
+    margin-left: 200px;
 
     }
     #OrderBtn:hover{
@@ -378,10 +439,10 @@
 }
 
 #priceBreakdown{
-    margin-top: 20px;
+    /* margin-top: 20px; */
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    width: 40%;
+    width: 100%;
     margin-top: 70px;
     margin-left: -300px;
     
@@ -405,6 +466,10 @@
    margin-top: 50px;
 
 }
+#AmountTobePaid{
+    font-weight: bold;
+}
+
 #cartValue,#PriceBreakoutSection p{
    font-size: large;
 }
@@ -428,15 +493,15 @@ font-weight: lighter;
 font-size: medium;
 }
 #hrlinePriceBreakdown{
-    width: 100%;
+    /* width: 100%;
     text-align: center;
     margin-left: 5%;
-    margin-top: 0%;
+    margin-top: 0%; */
 
 }
 
 #hrlinePriceBreakdown2{
-    margin-bottom: 150px;
+    /* margin-bottom: 150px; */
 }
 
 
@@ -779,9 +844,10 @@ font-size: medium;
 
   /* Qty Div Button */
 
-  #qtysection button{
-    margin: 5px;
+  #qtysection {
+    /* margin: 5px; */
+    
+    size: 20px;
+    width: 100px;
   }
-  #qtysection button:hover{
-    /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
-  }
+ 

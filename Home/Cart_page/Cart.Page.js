@@ -1,5 +1,21 @@
 // Narbar Login
 
+function ShopFunc(){
+    window.location.href="/Product_Catogery.html";  
+}
+
+function carFunc(){
+
+    window.location.href="/Cart_page/Cart_Page.html"; 
+
+}
+
+function OfferFunc(){
+    window.location.href="/Offer_Page.html";  
+}
+
+
+
 var loginstatus = JSON.parse(localStorage.getItem("PhoneNumber")) || [];
 
 //log out funnction
@@ -393,7 +409,7 @@ function ShowCartProd() {
 
             var prodnameDiv = document.createElement("div");
             prodnameDiv.setAttribute("id", "prodnamediv");
-            var prodnameh4 = document.createElement("h4");
+            var prodnameh4 = document.createElement("p");
             prodnameh4.innerText = ele.productName;
             var pBrandName = document.createElement("p");
             pBrandName.setAttribute("id", "BrandName");
@@ -453,14 +469,15 @@ function ShowCartProd() {
         icon.style="cursor:pointer";
         var mrp = document.createElement("div");
         var off =document.createElement("p");
-        off.innerText = "MRP ₹" + ele.productMrp;
+        off.setAttribute("id", "off")
+        off.innerText = " MRP ₹" + ele.productMrp;
         var offSpan = document.createElement("span");
-        offSpan.setAttribute("id", "off");
-        offSpan.innerText = "-"+ele.productOff;
+        offSpan.setAttribute("id", "mrp");
+        offSpan.innerText = "-"+ele.productOff+" OFF";
         off.append(offSpan);
         mrp.append(off);
 
-        var priceP = document.createElement("p");
+        var priceP = document.createElement("h5");
         priceP.setAttribute("id","price");
         priceP.innerText ="₹"+ele.productPrice*ele.productQuantity;
 
@@ -471,6 +488,7 @@ function ShowCartProd() {
 
         // Apending cart VAlue
         var cartValue = document.getElementById('PriceBreakoutSection').innerHTML="";
+        // cartValue.setAttribute("id","PriceBreakoutSection");
          var cartValueP= document.createElement("p");
          cartValueP.setAttribute("id","CartValue");
          cartValueP.innerText="₹"+TotalcartValue;
@@ -482,6 +500,7 @@ function ShowCartProd() {
         hrlinePriceBreakdown1.setAttribute("id","hrlinePriceBreakdown1");
 
         var AmountTobePaid=document.createElement("p");
+        AmountTobePaid.setAttribute("id","AmountTobePaid");
         AmountTobePaid.innerText="₹"+TotalcartValue;;
 
         var hrlinePriceBreakdown2 = document.createElement("hr");
