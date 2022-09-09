@@ -218,6 +218,9 @@ width: 300px;
 /* border: 2px solid red; */
 margin-top: -50px;
 }
+
+
 #OrderBtn:hover{
     background: #427270;
+    cursor: pointer;
 }
