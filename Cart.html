@@ -279,7 +279,7 @@
 <body>
 
     <div id="nav">
-        <!-- giving onclick attribute to navbar -->
+        giving onclick attribute to navbar
         <div>
             <img id="logopharm" src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png">
         </div>
@@ -349,7 +349,7 @@
             </div>
         </div>
     </div>
-    <!-- <div id="cartad">
+    <div id="cartad">
         <div class="div1">
             <img
                 src="https://cdn01.pharmeasy.in/dam/products_otc/I09432/neurobion-forte-tablet-30s-2-1656661904.jpg?dim=60x0&dpr=1.5&q=100" />
@@ -367,8 +367,8 @@
             <p>price;230</p>
         </div>
     </div> -->
-    <!-- footer page starts here -->
-    <div id="pluspoint">
+    footer page starts here
+     <div id="pluspoint">
         <div>
             <img src="https://assets.pharmeasy.in/web-assets/dist/9ac2da37.svg?dim=0x72&dpr=1&q=100">
             <h3>1 Lakh+Product</h3>
@@ -386,7 +386,7 @@
             <p>We have a new and dynamic return window policy for medicines and healthcare items. Refer FAQs section for
                 more details.</p>
         </div>
-    </div> -->
+    </div>
 
     <div id="bottom">
         <div>
@@ -427,7 +427,7 @@
             <div>Fitness & Supplements</div>
             <div>Elderly Care</div>
             <div>Pet Care</div>
-        </div> -->
+        </div>
         <div>
             <div>
                 <div>
@@ -509,3 +509,99 @@
 </body>
 
 </html>
+<!-- functionality part in js -->
+<script>
+
+
+
+
+
+    var med_toby= JSON.parse(localStorage.getItem("cartitem"))||[];
+    window.addEventListener("load",function(){
+       datadisplay(med_toby);
+      })
+    function sortfunction(){
+      var sele=document.querySelector("#selecttag").value;
+      if(sele=="high"){
+       med_toby.sort(function(a,b){
+         return b.price-a.price;
+       })
+      }
+      else if(sele=="low"){
+        med_toby.sort(function (a,b){
+          return a.price-b.price;
+        })
+      }
+      
+      datadisplay(med_toby);
+    }
+  function datadisplay(med_toby){
+    document.querySelector("#container").innerHTML="";
+
+       med_toby.map(function (data,index) {
+       var div = document.createElement("div");
+       
+       var image1 = document.createElement("img");
+       image1.setAttribute("src", data.image);
+
+       
+
+       var name1 = document.createElement("p");
+       name1.textContent = data.meDname;
+
+       var name2 = document.createElement("p");
+       name2.textContent = data.Brandname;
+     
+       var name3 = document.createElement("p");
+       name3.textContent = data.discription;
+
+     
+
+       var div2 = document.createElement("div");
+       div2.setAttribute("id","contp");
+
+       var p1 = document.createElement("p");
+       p1.textContent = data.price;
+
+       var p2 = document.createElement("p");
+       p2.textContent = data.strikedOfprice;
+     
+
+       div2.append(p1, p2);
+       var btn=document.createElement("button");
+       btn.setAttribute("id","innerbtn");
+       btn.textContent="Remove";
+       btn.addEventListener("click",function(){
+         deletetask(index)
+       })
+     
+
+     
+
+       
+       div.append(image1,name1,name2,name3 , div2,btn);
+       document.querySelector("#container").append(div);
+     });
+   }
+
+
+   function deletetask(index){
+    med_toby.splice(index,1)
+    localStorage.setItem("cartitem",JSON.stringify(med_toby))
+    window.location.href="cartmed.html";
+    datadisplay(med_toby)
+  }
+ 
+
+
+var total= med_toby.reduce(function (x,v){
+return x+Number(v.price);
+},0)
+document.querySelector("h1").textContent=` ₹ ${total}`
+console.log(total);
+
+
+
+
+
+</script>
