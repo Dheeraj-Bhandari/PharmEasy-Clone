@@ -423,7 +423,10 @@ function ShowCartProd() {
             DcrQtyBtn.setAttribute("type", "button");
             DcrQtyBtn.innerText = "-";
             DcrQtyBtn.addEventListener("click", function(){
-                DcrQtyBtn(index);
+                decreaseQuantity(index);
+                refreshPage();
+        
+
               })
 
 
@@ -444,6 +447,8 @@ function ShowCartProd() {
             IncQtyBtn.innerText = "+";
             IncQtyBtn.addEventListener("click", function(){
                 IncQty(index);
+                refreshPage();
+
               })
             
             qtydiv.append(DcrQtyBtn,addqtybutton,IncQtyBtn);
@@ -621,8 +626,34 @@ function Checkout(){
        
     }
 }
-    
+    // Adding and removing item Functionality in cart item//
 
+   // refreshing Page
+function refreshPage() {
+    window.location.reload();
+  }
+  // removing function
+  function remove(index) {
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    ShowCartProd(cart);
+  }
+  // In cart decrease item
+  function decreaseQuantity(index) {
+    cart[index].productQuantity = cart[index].productQuantity - 1;
+    if (cart[index].productQuantity == 0) {
+      remove(index);
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    ShowCartProd(cart);
+  }
+  // In cart increase item
+  function IncQty(index) {
+    cart[index].productQuantity = cart[index].productQuantity + 1;
+    localStorage.setItem("cart", JSON.stringify(cart));
+    ShowCartProd(cart);
+  }
+  
 
 
     
