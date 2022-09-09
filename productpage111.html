@@ -13,7 +13,6 @@
             top: 0;
             width: 100%;
              z-index: 200;
-           /* -webkit-user-select: none; */
             /* -moz-user-select: none; */
               /* user-select: none; */
              background-color: #fff;
@@ -100,6 +99,97 @@
             cursor: pointer;
 
         }
+        #loginpage {
+            height: 800px;
+            width: 450px;
+            background-color: white;
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            display: none;
+
+        }
+
+        #logintop {
+            background-color: #10847e;
+            /* border: 2px solid red; */
+            background-image: url("https://assets.pharmeasy.in/web-assets/dist/1fe1322a.svg?dim=256x0");
+            background-repeat: no-repeat;
+            background-position-x: right;
+            background-size: contain;
+            padding: 20px;
+            display: flex;
+        }
+
+        #logintop button {
+            position: absolute;
+            left: -40px;
+            background-color: #10847e;
+            width: 50px;
+            font-size: 30px;
+            color: white;
+            text-align: center;
+            padding: 7px;
+            border: none;
+            opacity: 1 !important;
+        }
+
+        #logintop>img {
+            width: 50%;
+        }
+
+        #loginbottom {
+            padding: 10px;
+            /* border: 1px solid red; */
+            width: 80%;
+            margin: auto;
+        }
+
+        #loginbottom label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #loginbottom input {
+            display: block;
+            margin-bottom: 10px;
+            width: 90%;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 17px;
+        }
+
+        #loginbottom p {
+            font-size: 15px;
+            text-align: justify;
+        }
+
+        #continuepart {
+            background-color: #10847e;
+            color: white;
+            font-weight: 500;
+        }
+
+        /* DropDown LogOut on nvaBar */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
         #belowNavbarinput{
             border: 1px solid silver;
             width: 30%;
@@ -262,7 +352,7 @@
     max-height: 350px;
     margin: 0 auto;
     background-color: #fff;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    /* box-shadow: 0 3px 6px rgba(0,0,0,0.2); */
   }
   
   .slider > button {
@@ -383,6 +473,24 @@
 
 }
 
+       @media screen and (max-width:800px){
+            #product-items-box{
+                grid-template-columns: repeat(1,1fr);
+            }
+            .slider {
+            max-height: 200px;
+            }
+            #paymentimg{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            #FooterLinks{
+                display: flex;
+                flex-wrap: wrap;  
+            }
+
+        }
+
    
     </style>
   
@@ -419,6 +527,28 @@
         <p id="loginbtn"> <i class="fa-solid fa-user"></i> Hello, Log In</p>
     </div>
     <div>
+
+        <div id="loginpage">
+            <div id="logintop">
+                <button id="closebtn"><i class="fas fa-times"></i></button>
+
+                <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png" alt="">
+            </div>
+            <div id="loginbottom">
+                <form action="" id="loginform">
+                    <label for="">Quick Login /Register</label>
+                    <input type="text" placeholder="Enter your phone number" id="loginphone">
+                    <p id='errormsg'></p>
+
+                    <input type="submit" value="Send OTP" id="continuepart">
+
+                </form>
+                <p>By clicking continue, you agree with our <span>Privacy Policy</span></p>
+            </div>
+        </div>
+        <!--  -->
+
+
         <i class="fa-sharp fa-solid fa-badge-percent"></i>
         <button>Offers</button>
     </div>
@@ -802,6 +932,133 @@ var sliders = new Sliders({
     autoTime: 3000,
     width_height: 350 / 250
 });
+
+
+
+
+
+        //  login functionality
+
+
+
+        if (loginstatus.length > 0) {
+        // document.getElementById("loginbtn").innerHTML=<i class="fa-solid fa-user"></i>;
+        document.getElementById("loginbtn").innerText = "Team Titan";
+        // var getOffer = document.getElementById("LoginToViewOffer")
+        // getOffer.innerText = "Hurray ! Click Here To View Offers";
+
+        // getOffer.addEventListener("click", function () {
+        //     window.location.href = "Offer_Page.html";
+        // })
+
+        var div = document.createElement("div");
+        div.setAttribute("class", "dropdown");
+        var span = document.createElement("span");
+        span.innerText = "See More";
+
+        var div2 = document.createElement("div");
+        div2.setAttribute('class', "dropdown-content");
+        var p = document.createElement("p");
+        p.setAttribute("id", "logoutNavBar");
+        p.addEventListener("click", logoutFunc);
+        p.innerText = "Log Out";
+
+        var p2 = document.createElement("p");
+        p2.addEventListener("click", ShopFunc);
+        p2.innerText = "Shop";
+
+        var p3 = document.createElement("p");
+        p3.addEventListener("click", carFunc);
+        p3.innerText = "Cart";
+
+        var p4 = document.createElement("p");
+        p4.addEventListener("click", OfferFunc);
+
+        p4.innerText = "Offer";
+        p4.addEventListener("click", OfferFunc);
+        div2.append(p2, p3, p4, p);
+        div.append(span, div2);
+        document.getElementById("navbarLogin").append(div);
+
+    }
+
+    document.querySelector("#loginbtn").addEventListener("click", validateLogin)
+   ;
+
+    function validateLogin() {
+        console.log(loginstatus.length)
+        if (loginstatus.length == 0) {
+            showlogin();
+        }
+
+    }
+
+    function showlogin() {
+        document.querySelector("#loginpage").style.display = "block";
+
+        document.querySelector("#loginpage").style.opacity = "1";
+
+    }
+    document.querySelector("#closebtn").addEventListener("click", hidelogin)
+
+    function hidelogin() {
+        document.querySelector("#loginpage").style.display = "none";
+        document.querySelector('body').style.opacity = "1";
+
+    }
+    // var phnnumber = loginform.loginphone.value;
+    document.querySelector("#loginform").addEventListener("submit", function () {
+        event.preventDefault()
+        var phnnumber = loginform.loginphone.value;
+        // console.log('number:', typeof(phnnumber))
+        if (phnnumber.length == 10) {
+            document.querySelector("#loginbottom").innerHTML = "";
+            var para = document.createElement("p")
+            para.innerText = "Enter OTP sent to +91 " + phnnumber;
+            var otpinput = document.createElement("input");
+            otpinput.setAttribute("type", "number");
+            otpinput.setAttribute('placeholder', "Enter OTP here")
+            var btn = document.createElement("input");
+            btn.setAttribute('type', 'submit');
+            btn.setAttribute('value', "CONTINUE");
+            btn.style.backgroundColor = "#10847e";
+            btn.style.color = "white"
+            var paralast = document.createElement('p');
+            var error = document.createElement('p');
+            error.style.color = "red"
+
+            paralast.innerText = "By clicking continue, you agree with our Privacy Policy"
+            btn.addEventListener('click', function () {
+                otpconfirm(otpinput.value, error, phnnumber)
+            })
+
+            document.querySelector("#loginbottom").append(para, otpinput, error, btn, paralast);
+
+        } else {
+            document.querySelector("#errormsg").innerText = "Enter a 10 Digit Valid Mobile number"
+            document.querySelector("#errormsg").style.color = "red";
+        }
+
+
+    })
+    function otpconfirm(v, error, phnnumber) {
+
+        if (v == "1234") {
+            localStorage.setItem("PhoneNumber", JSON.stringify(phnnumber));
+            document.querySelector("#loginpage").style.display = "none";
+            document.querySelector("#loginbtn").innerText = "Team Titan"
+
+            alert("Login Succesfully");
+
+            window.location.href = "Product_Catogery.html";
+
+
+
+        } else {
+            error.innerText = "The OTP entered is incorrect."
+        }
+
+    }
 
    </script>
 

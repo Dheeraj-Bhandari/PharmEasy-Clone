@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+#PaymentPageNavbar{
+    width: 100%;
+    height: 88px;
+    background-color: #10847E;
+    /* border: 2px solid red; */
+    display: flex;
+}
+.container-lg{
+    display: flex;
+    
+    width: 100%;
+
+}
+.container-lg img{
+    width: 180px;
+    height: 60px;
+    /* border: 2px solid red; */
+    align-self: center;
+    
+}
+.container-lg  p{
+    /* border: 2px solid red; */
+    width: 100%;
+    align-self: flex-end;
+    text-align: end;
+    color: white;
+    font-size: larger;
+}
+/* payemnt Mehtod */
+
+
+
+.container{
+
+    display: flex;
+    
+    
+}
+
+
+.container p, h3, h2, h4, h5, h1{
+    color: #4F585E;
+}
+h5{
+    font-weight: bolder;
+}
+
+
+#hrline{
+    width: 50%;
+    text-align: center;
+    margin-left: 5%;
+    margin-top: 0%;
+
+}
+
+#Offerh3{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-weight: bolder;
+}
+
+
+#Wallet{
+    display: flex;
+    /* border: 2px solid red; */
+    width: 70%;
+    
+    
+    
+}
+
+#paymentMethod img{
+    width: 60%;
+}
+#imgPaytm{
+    width: 20%;
+}
+#paymentMethod>div{
+    margin: 5px;
+
+}
+#paymentMethod p{
+    font-size: small;
+    color: #9797A2;
+    width: 90%;
+}
+
+#radioNoLabel1{
+    /* color: #10847E; */
+    width: 22px;
+    height: 22px;
+    background-color: #10847E;
+    cursor: inherit;
+    margin: 0;
+    opacity: 1;
+    padding: 0;
+    position: absolute; 
+    cursor: pointer;
+    
+}
+
+/* Other Options */
+
+#OtherOptions{
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-weight: bolder;
+}
+#Details img{
+    width: 60%;
+    margin-left: 5px;
+}
+
+#cod{
+    width: 120px;
+    height:50px;
+    margin: 15px;
+}
+#netbankingP{
+    width: 150px;
+    height:50px;
+    margin-right: 100px;
+}
+#codP{
+    width: 150px;
+    height:50px;
+    margin-right: 100px;
+}
+
+/* Price BreakDown */
+
+
+
+#priceBreakdown{
+    display: flex;
+   position: relative;
+   width: 50%;
+
+    flex-direction: row-reverse;
+
+}
+
+/* Price BreakDonw Section */
+
+#priceBreakdown{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 40%;
+    margin-top: 70px;
+    margin-left: -300px;
+    
+    /* border: 2px solid red; */
+}
+
+#priceBreakdown {
+  
+    /* border: 2px solid red; */
+    width: 50%;
+    height: 300px;
+    
+    
+ 
+}
+#cartValue{
+    /* border: 2px solid red; */
+   
+    height: 300px;
+   position: sticky;
+   margin-top: 50px;
+
+}
+#cartValue,#PriceBreakoutSection p{
+   font-size: large;
+}
+#PriceBreakoutSection{
+  
+    height: 300px;
+    position: sticky;
+    margin-top: 50px;
+    /* border: 2px solid red; */
+}
+#PriceBreakdownP{
+    font-weight: bold;
+    width: 30%;
+    height: 20px;
+    margin-top: 40px;
+  
+}
+#PriceBreakoutSection span{
+text-decoration: line-through;
+font-weight: lighter;
+font-size: medium;
+}
+#hrlinePriceBreakdown{
+    width: 100%;
+    text-align: center;
+    margin-left: 5%;
+    margin-top: 0%;
+
+}
+
+/* Order Button  */
+
+#OrderBtn{
+background: #10847E;
+height: 45px;
+font-weight: 700;
+width: 300px;
+/* border: 2px solid red; */
+margin-top: -50px;
+}
+#OrderBtn:hover{
+    background: #427270;
+}
