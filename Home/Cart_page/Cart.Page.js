@@ -613,7 +613,7 @@ function Checkout(){
     }
     // if(Name==""){
     //     alert("Please Enter Name")
-    // }
+    // }      
     // if(Adress==""){
     //    alert("Please Enter Address")
     // }
