@@ -39,5 +39,5 @@ Note - All the data  purchase addtocart etc data is stored usg Local Storage onl
 
 ## Netlify Link
 
-https://astonishing-chebakia-aa6dc9.netlify.app/
+https://beamish-parfait-71d07a.netlify.app/
 
