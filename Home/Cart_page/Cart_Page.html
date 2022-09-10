@@ -113,10 +113,10 @@
 
 
             <div id="ProductSection">
-               <!-- <div id="IteminCartDiv">
+                <!-- <div id="IteminCartDiv">
                      <h4 id="itemincart">2 Item in Cart</h4> -->
                 <!-- </div>  -->
-                
+
                 <!-- <div id="ProductDetails">
                     <div id="prodimg">
                         <img src="https://cdn01.pharmeasy.in/dam/products_otc/I40695/dettol-antiseptic-liquid-bottle-of-550-ml-2-1656923531.jpg?dim=320x320&dpr=1&q=100"
@@ -134,64 +134,65 @@
                                     <option value="3">3</option>
     
                                 </select> -->
-                            <!-- </button>
+                <!-- </button>
     
                         </div>
                         <P id="DeliveryDate">Delivery by Tommorow Before 10 pm</P>
                     </div> -->
-                    <!-- <div id="DeleteSection">
+                <!-- <div id="DeleteSection">
                         <i id="delicon" class="fa-sharp fa-solid fa-trash"></i>
                         <div id="mrp">
                             <p>420.12 <span id="off">12% OFF</span></p>
                         </div>
                         <p id="Price">376.75</p>
                     </div> -->
-                <!-- </div> --> 
+                <!-- </div> -->
             </div>
-            
+
             <div id="OrderSummarySection">
                 <div id="applyCoupon">
                     <i class="fa-solid fa-tire-rugged"></i>
                 </div>
-                <button id="OrderBtn"  onclick="Addressbtn()" type="button" class="btn btn-success">Add Delivery Address</button>
+                <button id="OrderBtn" onclick="Addressbtn()" type="button" class="btn btn-success">Add Delivery
+                    Address</button>
                 <Order id="Summary">
                     <div id="priceBreakdown">
-                
+
                         <div id="cartValue">
-                            
+
                             <br>
-                         <br>
+                            <br>
                             <p>Cart value </p>
-                            
-                         
+
+
                             <hr id="hrlinePriceBreakdown">
-                            
-                            <p id="amttopay" >Ammount to be paid</p>
-                            
+
+                            <p id="amttopay">Ammount to be paid</p>
+
                             <hr id="hrlinePriceBreakdown2">
                         </div>
                         <div id="PriceBreakoutSection">
-                            
+
                             <p id="CartValue"> 0 <span id="discount"></p>
                             <hr id="hrlinePriceBreakdown1">
                             <p id="AmountTobePaid"> 0</p>
                             <hr id="hrlinePriceBreakdown2">
                         </div>
-            
-                       
-                    </div>  
+
+
+                    </div>
                 </Order>
-    
+
             </div>
 
-            
 
-            
+
+
         </div>
 
-           <!-- Login Page -->
+        <!-- Login Page -->
 
-           <div id="AdressPage">
+        <div id="AdressPage">
             <div id="logintop">
                 <button id="closebtnAdress"><i class="fas fa-times"></i></button>
 
@@ -201,38 +202,40 @@
                 <form action="submit" id="AdressForm">
                     <!-- <input placeholder="Enter Name" id="name" name="name" type="text" /> -->
                     <label for="form">Delivery Name and Adress</label>
-                    <input type="text" name="name" placeholder="Enter Name" id="loginphone" class="Entername">
-                    <input type="text"   phone = "phone"  placeholder="Adress" id="loginphone"  class="EnternAdress">
-                    <input type="text"  mobile = "mobile"  placeholder="Mobile Number" id="loginphone" class="EnterPhone">
-                    <input type="text"  pincode=""pincode placeholder="PinCode" id="loginphone" class="EnterPinCode">
+                    <input type="text" name="name" placeholder="Enter Name" id="loginphone" class="Entername" required>
+                    <input type="text" phone="phone" placeholder="Adress" id="loginphone" class="EnternAdress" required>
+                    <input type="text" mobile="mobile" placeholder="Mobile Number" id="loginphone" class="EnterPhone"
+                        required>
+                    <input type="text" pincode="" pincode placeholder="PinCode" id="loginphone" class="EnterPinCode"
+                        required>
                     <p id='errormsg'></p>
-                
-                     <button id="Checkout" type="submit">Checkout</button>
+                    <button id="Checkout" type="submit" class="btn btn-success">CheckOut</button>
+                    <!-- <button id="Checkout" type="submit">Checkout</button> -->
                 </form>
-                   
-                   
-                    
-                   
+
+
+
+
 
                 </form>
                 <p>By clicking continue, you agree with our <span>Privacy Policy</span></p>
             </div>
         </div>
         <!--  -->
-        
+
 
         <!-- Deals of The day -->
 
-    <h4 id="DealsofTheDayH4">Limited Stock</h4>
+        <h4 id="DealsofTheDayH4">Limited Stock</h4>
 
-    <div id="DealsofTheDay"></div>
+        <div id="DealsofTheDay"></div>
 
-    <!-- In The SpotLight -->
-    <div id="InTheSpotLightContainer">
-        <h4 id="InTheSpotLightH4">Product Frquently Bought Together</h4>
-        <div id="InTheSpotLight"></div>
-    </div>
-    
+        <!-- In The SpotLight -->
+        <div id="InTheSpotLightContainer">
+            <h4 id="InTheSpotLightH4">Product Frquently Bought Together</h4>
+            <div id="InTheSpotLight"></div>
+        </div>
+
 
     </div>
 
@@ -347,11 +350,52 @@
 
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"></script>
-    <script src="/Cart_page/Cart.Page.js"></script>
-    <script src="https://kit.fontawesome.com/d6b32c1f32.js" crossorigin="anonymous"></script>
+
+    <!--  Toast Body -->
+    <h2>Toast</h2>
+    <p>Click on the button to show the Toast. It will disappear after 5 seconds.</p>
+
+    <button onclick="ItemDel_toast()">Show Toast</button>
+
+    <div id="toast">
+        <div id="img">
+            <i class="fa-sharp fa-solid fa-cart-plus"></i>
+        </div>
+        <div id="desc">Product Added To Cart</div>
+    </div>
+
+        <!-- Toast Body -->
+        <h2>Toast</h2>
+        <p>Click on the button to show the Toast. It will disappear after 5 seconds.</p>
+
+        <button onclick="QtyIec_toast()">Show Toast</button>
+
+        <div id="toast">
+            <div id="img">
+                <i class="fa-sharp fa-solid fa-cart-plus"></i>
+            </div>
+            <div id="desc">Product Added To Cart</div>
+        </div>>
+
+        
+        <!-- Toast Body -->
+        <h2>Toast</h2>
+        <p>Click on the button to show the Toast. It will disappear after 5 seconds.</p>
+
+        <button onclick="QtyDec_toast()">Show Toast</button>
+
+        <div id="toast">
+            <div id="img">
+                <i class="fa-sharp fa-solid fa-cart-plus"></i>
+            </div>
+            <div id="desc">Product Added To Cart</div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+            crossorigin="anonymous"></script>
+        <script src="/Cart_page/Cart.Page.js"></script>
+        <script src="https://kit.fontawesome.com/d6b32c1f32.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

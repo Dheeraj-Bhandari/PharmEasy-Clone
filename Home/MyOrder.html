@@ -772,7 +772,7 @@
                             </div>
                             <div>
                                 <div>Delivery charges</div>
-                                <div>₹99.00</div>
+                                <div>₹50.00</div>
                             </div>
                             <div>
                                 <div>Packaging Charges</div>
@@ -780,7 +780,7 @@
                             </div>
                             <div>
                                 <div>Convenience Charges</div>
-                                <div><span>₹39</span></div>
+                                <div><span>₹0</span></div>
                             </div>
                         </div>
                         <div>
@@ -949,15 +949,15 @@
     }
 
     function ShopFunc() {
-
+        window.location.href="/Product_Catogery.html";  
     }
 
     function carFunc() {
-
+        window.location.href="/Cart_page/Cart_Page.html"; 
     }
 
     function OfferFunc() {
-
+        window.location.href="/Offer_Page.html";  
     }
 
     //  Login Page 
@@ -1091,12 +1091,46 @@
     // productQuantity
     // : 
     // 5
+    
+    const cart = JSON.parse(localStorage.getItem("cart"));
+    
+    // const OrderPlacedcart =JSON.parse(localStorage.getItem("OrderPlacedcart")) || [];
+    // console.log(cart);
+    
+    // // localStorage.removeItem(cart);
+    // // coopy();
+    // //  var OrderPlacedcart = [];
+    // // function coopy(){
+       
+    //     cart.map(item=>{
+    //         var product = {
+    //                 productImg: item.productImg,
+    //                 productMrp: item.productMrp,
+    //                 productName: item.productName,
+    //                 productOff: item.productOff,
+    //                 productPrice: item.productPrice,
+    //                 productQuantity: item.productQuantity,
+    //             };
+    //             OrderPlacedcart.push(product);
+    // })
+    
+    // // }
+    // localStorage.setItem("OrderPlacedcart", (OrderPlacedcart));
+    // const OrderPlacedcart2 = JSON.parse(localStorage.getItem("OrderPlacedcart")) || [];
+    // console.log(OrderPlacedcart2);
+    
+   
+    
+    // console.log(cart);
+    // console.log(OrderHistory1);
+    // localStorage.setItem("OrderHistory", OrderHistory1);
 
-    var cart = JSON.parse(localStorage.getItem("cart")) || [];
- 
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    
     AppendOrder();
     function AppendOrder(){
-        if(cart==null || cart.length==0){
+        if(cart==null || cart==0){
             console.log("No Order Placed")
         }
         else{
@@ -1151,8 +1185,8 @@
 
 
     })}
-    var TotalMrp = JSON.parse(localStorage.getItem("TotalMRP"));
-    var TotalCart = JSON.parse(localStorage.getItem("TotalCartvalue"))
+    var TotalMrp = Math.round(JSON.parse(localStorage.getItem("TotalMRP")));
+    var TotalCart =Math.round (JSON.parse(localStorage.getItem("TotalCartvalue")));
     document.getElementById("cartValueDiv").innerHTML="";
     document.getElementById("OrderTotalDiv").innerHTML="";
     document.getElementById("TotalSaving").innerHTML="";
@@ -1163,7 +1197,7 @@
 
     var OrderTotal = document.createElement("p");
      OrderTotal.setAttribute("id", "OrderTotal");
-     var total = Math.round(TotalCart+99+30+39);
+     var total = Math.round(TotalCart+50+30);
      OrderTotal.innerText=  "₹"+total;
      document.getElementById("OrderTotalDiv").append(OrderTotal);
 
@@ -1196,10 +1230,9 @@
 
     }
 
-    
-    
+   
 
-
+// localStorage.removeItem("cart", cart);
 
 </script>
 

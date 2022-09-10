@@ -76,7 +76,8 @@
                 <div id="NavBarcart">
 
 
-                    <p> <i class="fa-sharp fa-solid fa-cart-shopping"></i> Cart <span id="carticonQty" style="font-size: 15px;" >(0)</span></p>
+                    <p> <i class="fa-sharp fa-solid fa-cart-shopping"></i> Cart <span id="carticonQty"
+                            style="font-size: 15px;">(0)</span></p>
 
                 </div>
             </div>
@@ -139,8 +140,7 @@
 
                     </div>
                     <div id="qtysection">
-                        <button id="addqtybtn" type="button" class="btn btn-success"
-                     >Add To Cart</button>
+                        <button id="addqtybtn" type="button" class="btn btn-success">Add To Cart</button>
                         <!-- <select name="addqty" id="AddQty">
                             <option selected>Select Qty</option>
                             <option value="1">1</option>
@@ -152,19 +152,19 @@
                     </div>
                     <hr id="hrline">
                 </div>
-                
+
             </div>
-            
+
 
             <div id="viewCart">
                 <div id="ItemAddedToCartDiv">
-<h4 id="addedtoCartSuccess">Cart is Empty</h4>
-</div>
-                
+                    <h4 id="addedtoCartSuccess">Cart is Empty</h4>
+                </div>
+
                 <a href="/Cart_page/Cart_Page.html"> <button id="ViewCartbtn" type="button" class="btn btn-success">View
                         Cart </button></a>
-                    <a href="/Offer_Page.html"> <img src="/Product page/img/Offer just for you.png" alt=""></a>
-               
+                <a href="/Offer_Page.html"> <img src="/Product page/img/Offer just for you.png" alt=""></a>
+
             </div>
         </div>
 
@@ -329,6 +329,18 @@
 
     </div>
 
+    <!-- Toast Body -->
+    <h2>Toast</h2>
+    <p>Click on the button to show the Toast. It will disappear after 5 seconds.</p>
+
+    <button onclick="launch_toast()">Show Toast</button>
+
+    <div id="toast">
+        <div id="img">
+            <i class="fa-sharp fa-solid fa-cart-plus"></i>
+        </div>
+        <div id="desc">Product Added To Cart</div>
+    </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
