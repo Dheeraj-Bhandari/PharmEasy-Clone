@@ -660,9 +660,8 @@ function ItemDel_toast(){
   x.className = "show";
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
 }
-=======
-  window.location.href = "/Product_Catogery.html";
-}
+
+
 
 function carFunc() {
   window.location.href = "/Cart_page/Cart_Page.html";
