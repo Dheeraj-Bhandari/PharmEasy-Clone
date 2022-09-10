@@ -439,20 +439,11 @@ option {
   }
   /* select {
     padding: 6px;
-<<<<<<< HEAD
-
     margin-right: 59px;
   } */
   section {
     width: 89%;
 
-=======
-    margin-right: 59px;
-  } */
-  section {
-    width: 89%;
-
->>>>>>> 8177469f84d825c71310956d864ba82f0f2f35b6
     gap: 47px;
   }
   h2 {
@@ -461,8 +452,4 @@ option {
   #product {
     width: 234px;
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 8177469f84d825c71310956d864ba82f0f2f35b6
