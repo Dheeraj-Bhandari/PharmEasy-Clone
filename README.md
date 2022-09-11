@@ -1,7 +1,7 @@
 
 # PharmEasy Clone
 
-This Project is Part of Challange  which has held by Masai. T
+This Project is Part of Challange  which has held by Masai.
 
 
 
