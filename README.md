@@ -1,7 +1,7 @@
 
 # PharmEasy Clone
 
-This Project is Part of Challange / Competition which has held by Masai. The result will be announce by 13 Sep 2022.
+This Project is Part of Challange  which has held by Masai. T
 
 
 
