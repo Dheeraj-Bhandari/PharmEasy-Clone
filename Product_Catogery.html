@@ -1073,6 +1073,10 @@
 
     healthcare_data.map(function (ele, index) {
         var healthcare_childdiv = document.createElement("div");
+        healthcare_childdiv.id = "ProductDiv"
+        healthcare_childdiv.addEventListener('click', function(){
+            location.href = "/Filter_Page/Filter.html"
+        })
         var child_image = document.createElement("img");
         child_image.setAttribute("id", "health_image");
         /* id set for image and use in css */
