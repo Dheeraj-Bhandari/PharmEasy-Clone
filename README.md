@@ -39,5 +39,5 @@ Note - All the data  purchase addtocart etc data is stored usg Local Storage onl
 
 ## Netlify Link
 
-https://beamish-parfait-71d07a.netlify.app/
+https://pharmeasyclone2022.netlify.app/
 
