@@ -16,7 +16,7 @@ This Project is Part of Challange  which has held by Masai.
 ## Features
 
 - All data is Obj based;
-- Login / Register By Defaut password 1234, Name Team Titan
+- Login / Register Defaut password ```1234``` , Name Team Titan
 - Coupon Page with Filter
 - Filter By Catogery
 - Add to cart
